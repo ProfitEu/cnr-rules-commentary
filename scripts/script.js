@@ -153,13 +153,20 @@ window.onscroll = function() {
 function scrollFunction() {
     const toTopBtn = document.getElementById("toTopBtn");
     const indexBtn = document.getElementById("indexBtn");
+    const showNotesBtn = document.getElementById("showNotesBtn");
+    const toggleTooltipsBtn = document.getElementById("toggleTooltipsBtn");
+
 
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         toTopBtn.style.display = "block";
         indexBtn.style.display = "block";
+        showNotesBtn.style.display = "block";
+        toggleTooltipsBtn.style.display = "block";
     } else {
         toTopBtn.style.display = "none";
         indexBtn.style.display = "none";
+        showNotesBtn.style.display = "none";
+        toggleTooltipsBtn.style.display = "none";
         document.getElementById("indexBox").style.display = "none";
     }
 }
