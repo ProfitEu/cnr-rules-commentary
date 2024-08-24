@@ -1,0 +1,427 @@
+body {
+    font-family: Tahoma, sans-serif;
+    line-height: 1.6;
+}
+
+/* - - - NOTE FUNCTIONALITY - - - */
+.note-button {
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    vertical-align: top;
+    font-size: 0.8em;
+    padding: 1px;
+    background-color: #555;
+    border: 1px;
+    border-radius: 2px;
+
+}
+
+.note-button:focus {
+    outline: none;
+}
+
+.note-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    margin-top: 0;
+    padding: 0 10px;
+    border-left: 4px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.note-content.expanded {
+    padding: 10px;
+    margin-top: 10px;
+    max-height: 750px;
+}
+
+.note-content.expanded p {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+.note-content.expanded a {
+    text-decoration: none;
+    color: blue;
+}
+
+.note-id {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.note-id::before {
+    content: "(";
+}
+
+.note-id::after {
+    content: ")";
+}
+
+.note-date {
+    color: #555;
+    margin-right: 3px;
+}
+
+.note-date::after {
+    content: " |"
+}
+
+.note-author {
+    font-style: italic;
+    color: #555;
+}
+
+.note-author::before {
+    content: "Comment by: ";
+    font-style: italic;
+    color: inherit;
+}
+
+.subtitle {
+    margin-top: 20px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+/* - - - INTERACTIVITY - - - */
+/* Button to go to top of page */
+#toTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    background-color: #555;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+}
+
+#toTopBtn:hover {
+    background-color: #333; /* Darker on hover */
+}
+
+/* Index button */
+#indexBtn {
+    position: fixed;
+    bottom: 20px; 
+    right: 60px;
+    z-index: 99;
+    width: 50px;
+    font-size: 18px;
+    background-color: #555;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: none; 
+}
+
+#indexBtn:hover {
+    background-color: #333;
+}
+
+/* Index box from index button */
+#indexBox {
+    display: none; 
+    position: fixed;
+    bottom: 20px;
+    right: 110px;
+    width: 250px;
+    background-color: #555;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 100;
+}
+
+#indexBox ul {
+    padding-left: 20px;
+}
+
+#indexBox ul li {
+    margin-bottom: 10px;
+}
+
+#index-content {
+    font-size: 14px;
+    color: white;
+    line-height: 1.5;
+}
+
+#index-content a {
+    text-decoration: none;
+    color: white;
+}
+
+#index-content a:hover {
+    text-decoration: underline;
+}
+
+/* - - - OVERLAY BOX AND BUTTON - ALL NOTES - - - */
+
+.overlay-button {
+    font-size: 18px;
+    position: fixed;
+    right: 20px;
+    bottom: 65px;
+    background-color: #555;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.overlay-button:hover {
+    background-color: #333;
+}
+
+/* Overlay box styles */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1000; /* High z-index to appear above other content */
+    overflow: hidden; /* Prevents default scrolling */
+}
+
+/* Overlay content */
+.overlay-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh; /* Restricts the height to allow scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
+    border-radius: 10px;
+    position: relative;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 #f1f1f1; /* For Firefox */
+}
+
+/* Custom scrollbar for WebKit browsers */
+.overlay-content::-webkit-scrollbar {
+    width: 15px; /* Width of the scrollbar */
+}
+
+.overlay-content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+.overlay-content::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners for the thumb */
+}
+
+.overlay-content::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+}
+
+/* Rolling curtain effect for the right side */
+.overlay-content:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px; /* Width of the rolling curtain */
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.8), transparent);
+    pointer-events: none; /* Allows clicks through the curtain */
+}
+
+
+
+
+/* - - - TABLE STYLING - - -  */
+table th {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 2px solid #ddd;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+table th, table td {
+    padding: 12px 8px;
+}
+
+/* Table border */
+table {
+    width: 100%;
+    border: 1px solid #ddd; 
+}
+table {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/* - - - DEFINITIONS TOOLTIPS PULLED FROM TABLE - - - */
+/* Tooltip toggle button*/
+#toggleTooltipsBtn {
+    font-size: 18px;
+    position: fixed;
+    width: 50px;
+    right: 60px;
+    bottom: 65px;
+    background-color: #555;
+    border-color: #555;;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toggleTooltipsBtn:hover {
+    background-color: #333;
+}
+
+#toggleTooltipsBtn.active {
+    background-color: #e06100;
+    border-color: #ee6600;
+}
+
+/* Tooltip container */
+.hover-definition-text {
+    position: relative;
+    cursor: pointer;
+    color: #ee6600;
+}
+
+.hover-definition-text:hover {
+    color: #e78f4b;
+}
+
+/* Tooltip text */
+.hover-definition-text::after {
+    content: attr(data-hover);
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%); /* Center tooltip */
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Break long words */
+    display: none;
+    z-index: 10;
+    max-width: 500px; 
+    min-width: 150px; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+    text-align: left; /* Align text to the left for readability */
+    font-weight: normal;
+}
+
+/* Show tooltip text when hovering - AFTER class is added */
+.hover-definition-text.show-tooltip::after {
+    display: block; 
+}
+
+
+/* - - - ADAPTATIONS FOR DIFFERENT DEVICES - - - */
+/* For mobile devices */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+        margin-left: 1em;
+        margin-right: 2em;
+    }
+    
+    #index-content {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    .hover-definition-text::after{
+        left: 0%;
+        transform: translateX(0%);
+        padding: 4px;
+    }
+}
+
+/* For tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+    body {
+        font-size: 16px;
+        padding: 15px;
+        margin-left: 4em;
+        margin-right: 6em;
+    }
+
+}
+
+/* For desktops */
+@media (min-width: 901px) {
+    body {
+        font-size: 18px;
+        padding: 20px;
+        margin-left: 6em;
+        margin-right: 8em;
+    }
+
+}
+/* - - - */
+
+/* Colors sourced from rules page */
+a {
+    color: #ee6600;
+}
+
+.criminal {
+    color: #ee6600;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.most-wanted {
+    color: #dd0000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cop {
+    color: #0088ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.paramedic {
+    color: #8844cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.firefighter {
+    color: #ba5254;
+    font-weight: bold;
+}
+
+/**/
+

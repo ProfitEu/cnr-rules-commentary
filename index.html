@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CnR Rules with comments</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- !!! THE RULES THEMSELVES ARE ACCESIBLE AT https://gtacnr.net/full_rules AND WERE SOURCED FROM SAID SITE !!! -->
+    <!-- !!! THIS IS NOT AN https://gtacnr.net/ PAGE !!!-->
+
+    <!-- MAIN CONTAINER -->
+    <div id="bodycontainer">
+
+        <!-- CONTENT INDEX | INDEX MENU PULLS FROM THIS -->
+        <div id="contentIndex">
+            <h3>Index</h3>
+            <ul class="listNoBullets">
+                <li><a href="#disclaimer">Disclaimer</a></li>
+                <li><a href="#definitions">Definitions</a></li>
+                <li>
+                    <a href="#rule01">1. Do not RDM</a>
+                    <ul>
+                        <li><a href="#dol">Defense of Life</a></li>
+                        <li><a href="#rdm_civs">Civilians</a></li>
+                        <li><a href="#rdm_cops">Police Officers</a></li>
+                        <li><a href="#rdm_ems">Paramedics</a></li>
+                        <li><a href="#rdm_all">All</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="#rule02">2. Do not cross-team</a></li>
+                <li><a href="#rule03">3. Do not cheat</a></li>
+                <li><a href="#rule04">4. Do not exploit</a></li>
+                <li><a href="#rule05">5. Do not combat log</a></li>
+                <li><a href="#rule06">6. Do not evade bans</a></li>
+                <li><a href="#rule07">7. Do not lie to staff</a></li>
+                <li><a href="#rule08">8. Do not impersonate staff</a></li>
+                <li><a href="#rule09">9. Do not advertise</a></li>
+                <li><a href="#rule10">10. Maintain an appropriate behavior</a></li>
+            </ul>
+        </div>
+
+        <!-- DISCLAIMER AND PREFACE -->
+        <div id="disclaimer">
+            <h3>Disclaimer and preface</h3>
+            <p>
+                This is an <b>unofficial copy</b> of the complete rule page of <a href="https://gtacnr.net/">Cops and Robbers V</a> for FiveM. 
+                The original page containing the full rules can be found <a href="https://gtacnr.net/full_rules">here</a>. 
+                You can also find a summary of the rules <a href="https://gtacnr.net/rules">here</a>, which is also translated 
+                in multiple languages. This page is a work in progress and may therefore not always be up to date. 
+                The rules may change without any notice, and the best way to stay updated is by checking the official page. 
+                This copy is based on the rules last updated December 20, 2023.
+                Everything below is quoted from the <a href="https://gtacnr.net/full_rules">full rules page</a>, except for the notes.
+                The notes can be accessed by clicking on the small highlighted numbers next to a rule, and will provide commentary to the rules they are attached to.
+            </p>
+            <p>
+                Here are some important things to keep in mind:
+            </p>
+            <ul>
+                <li>Not knowing the rules or being a new player doesn't make you exempt from them</li>
+                <li>Please, report rule-breakers in-game or on our <a href="https://gtacnr.net/discord">Discord server</a> to help us keep the server fun for everyone, but <b>be reasonable</b>, don't over-report, and follow the <a href="https://gtacnr.net/report_rules">Reporting Rules</a></li>
+                <li>The burden of proof is on you, and the reported player is innocent until proven guilty by preponderance of evidence</li>
+                <li>These rules are to be interpreted <b>by the staff</b>, in the most reasonable and intelligent way, users must accept the official interpretation</li>
+                <li>We reserve the right to ban or otherwise penalize someone at our sole discretion and without explanation</li>
+            </ul>
+        </div>
+
+        <!-- DEFINITIONS -->
+        <div id="definitions">
+            <h3>Definitions</h3>
+            <table class="table" id="table_definitions">
+                <thead>
+                    <tr><th>Term</th><th>Definition</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>User</td><td> a physical person that's registered on the platform</td></tr>
+                    <tr><td>Player</td><td> a human-controlled character</td></tr>
+                    <tr><td>NPC</td><td> an AI-controlled character</td></tr>
+                    <tr data-term="friend" id="friend"><td>Friend</td><td> a player that you like and you had at least one positive interaction with</td></tr>
+                    <tr data-term="enemy" id="enemy"><td>Enemy</td><td> a player that you dislike and you had at least one negative interaction with</td></tr>
+                    <tr data-term="opponent" id="opponent"><td>Opponent</td><td> a player whose game objective conflicts with yours</td></tr>
+                    <tr data-term="game_session" id="game_session"><td>Game session</td><td>a game week, starting Sunday 00:00 and ending whenever the server stops or restarts</td></tr>
+                    <tr data-term="weapon" id="weapon"><td>Weapon</td><td> a tool that can give damage to players (guns, knives, melee weapons)</td></tr>
+                    <tr data-term="lesslethal" id="lesslethal"><td>Less-lethal weapon</td><td> a tool that's designed to neutralize or disorient a player without giving them damage, currently: the Stun Gun and the Flashbang</td></tr>
+                    <tr data-term="attack" id="attack"><td>To attack</td><td> to hit, shoot at, or ram a player or the vehicle they're inside or on its roof, intentionally or negligently</td></tr>
+                    <tr data-term="defense" id="defense"><td>To defend (life)</td><td> to use force in response to a threat or an imminent danger to life by another player</td></tr>
+                    <tr data-term="threat" id="threat"><td>Threat (in-game)</td><td>an endangerment by another player's behavior. Its duration is short by nature, it's no longer called a threat when the danger stops existing.</td></tr>
+                    <tr data-term="dangerous" id="dangerous"><td>Dangerous</td><td>a player who's a threat may also be described as dangerous</td></tr>
+                    <tr data-term="poi" id="poi"><td>Points of interest</td><td>stores, hospitals, police stations, mechanic shops. In general, places where all players have a legitimate reason to go and stay. You don't have to be inside the building.</td></tr>
+                    <tr data-term="carjack" id="carjack"><td>To carjack</td><td> to drag someone out of their vehicle (and optionally, steal it)</td></tr>
+                    <tr data-term="property" id="property"><td>Your property</td><td> your money, your personal vehicles, the vehicles you're currently using or you parked nearby, your home, your business, your items</td></tr>
+                    <tr data-term="player_innocent" id="player_innocent"><td>Innocent</td><td> a player whose wanted level is 0</td></tr>
+                    <tr data-term="player_civilian" id="player_civilian"><td>Civilian</td><td> a player that has the ability to gain or lose wanted level</td></tr>
+                    <tr data-term="criminal" id="criminal"><td>Criminal/suspect</td><td> a player that has a wanted level of one star or more, and their name is yellow, orange or red</td></tr>
+                    <tr data-term="mw" id="mw"><td>Most wanted</td><td> a suspect that has a 5 star wanted level</td></tr>
+                    <tr data-term="player_cop" id="player_cop"><td>Cop</td><td> a player that has the ability to arrest suspects</td></tr>
+                    <tr data-term="player_medic" id="player_medic"><td>Paramedic</td><td> a player that has the ability to revive players</td></tr>
+                    <tr data-term="police_activity" id="police_activity"><td>Police Activity</td><td>a pursuit, a shootout, or any attempt to stop or fight a crime</td></tr>
+                    <tr data-term="staff" id="staff"><td>Staff</td><td> testers, designers, developers, moderators, admins, managers, co-owners, owners</td></tr>
+                    <tr data-term="scriptedfeature" id="scriptedfeature"><td>Scripted feature</td><td> a feature that's built into the game/server, as opposed to player-created scenarios (RP)</td></tr>
+                    <tr data-term="modification" id="modification"><td>Modification</td><td> an external addition to the game</td></tr>
+                    <tr data-term="bug"><td>Bug</td><td> a feature that doesn't work the way it is intended to</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Rule 1 - DO NOT RDM -->
+        <div id="rule01">
+            <h3>1. Do not RDM</h3>
+            <a href="#attack"><span class="hover-definition-text" data-term="attack">Attacking</span></a><button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> or killing other players for no valid reason, defined here as RDM, is not allowed on this server. 
+            You may not kill any other player except when allowed by these rules.
+
+            <!-- Note Attacking RDM -->
+            <div id="note[NOTE_ID]" class="note-content">
+                <span class="note-id">[NOTE_ID]</span>
+                <span class="note-date">23.08.2024</span>
+                <span class="note-author">Profit</span>
+                <p>Contrary to what this written rule and the definition of "Attack" in the definitions above would have one believe, to "shoot at" someone seems to not qualify as a rule break. The player on the receiving end must actually take damage for the "attack" rule to apply.</p>
+                <p>See this report and decision: <a href="https://discord.com/channels/738534756538384499/1254953016105238609" target="_blank">TXC | Warzox (276) - RDM</a> (25.06.2024)</p>
+                <p>This was also brought up in the following suggestion: <a href="https://discord.com/channels/738534756538384499/1266824602642808993" target="_blank">Update the written rules [...]</a> (27.07.2024)</p>
+            </div>
+
+            <br>
+
+            <h4 id="dol">What is Defense of Life</h4>
+            <div>
+                Defense of life (short: DoL, includes self-defense and defense of other players) is defined <a href="#defense"><span class="hover-definition-text" data-term="defense">here</span></a> as using force in response to a <a href="#threat"><span class="hover-definition-text" data-term="threat">threat</span></a>.
+                Oftentimes, players are confused as to what constitutes a threat, so we have created this new paragraph with practical examples.
+                The following players can be considered a threat to you, or to someone else that you have the right to defend:
+                <ul>
+                    <li>A player holding a weapon near you while facing you, unless you're in a gun store</li>
+                    <li>A player aiming a weapon at you or in your general direction</li>
+                    <li>A player shooting at you or in your general direction</li>
+                    <li>A player trying to stab you or hit you with a tool or melee weapon</li>
+                    <li>A player trying to carjack you</li>
+                    <li>A player driving towards you with the intent to run you over or ram your vehicle</li>
+                    <li>A player verbally threatening to kill you or harm you in any way</li>
+                </ul>
+                Keep in mind that the above are only <i>examples</i>, and the rule of thumb is that if an average, reasonable person would feel 
+                threatened by the actions of the player in question, then taking them down for Defense of Life is allowed.
+                The duration of a threat is short, so you can only act in defense of life when the danger is active.
+            </div>
+
+            <br>
+            <h4 id="rdm_civs">Part One - Civilians</h4>
+            <div>
+                <i>The following sections only apply when you are a civilian (any role or job that can gain a wanted level).</i>
+            </div>
+            
+            <div>
+                <div class="subtitle">a. Revenge</div>
+                <div>
+                    Being <a href="#attack"><span class="hover-definition-text" data-term="attack">attacked</span></a>, arrested, killed, robbed, or getting your <a href="#property"><span class="hover-definition-text" data-term="property">property</span></a> 
+                    damaged, stolen or seized gives you the right to attack and kill the other player(s) on sight <b>once, within the 
+                    same <a href="#game_session"><span class="hover-definition-text" data-term="game_session">game session</span></a></b>. This includes any failed attempts to do those things. If you get 
+                    attacked again, your right to obtain revenge is reinstated. The chain of revenge stops when either of the two 
+                    players stops seeking their revenge.
+                </div>
+                <div>
+                    It doesn't matter if the incident that resulted in your loss happened when you were a cop or a paramedic,
+                    the important thing is that when you take revenge you are not on one of those jobs. You can switch from those
+                    jobs to a civilian job to take your revenge if necessary.
+                </div>
+                <div>
+                    When two players simultaneously kill each-other (also known as trading), the revenge is not considered to have been satisfied,
+                    thus both players are allowed to find the other player to kill them in revenge.<br>
+                </div>
+                <div>
+                    You are also allowed to send another player to kill your target on your behalf; your right to revenge will
+                    be satisfied once the order or contract is completed, and you cannot kill the target again. If you've been 
+                    sent to kill someone, you must have evidence that the order or contract has taken place (e.g. a DM screenshot).
+                </div>
+            </div>
+
+            <div>
+                <div class="subtitle">b. Self-defense and defense of friends</div>
+                <div>
+                    You're allowed to kill an attacker in self-defense or in defense of your <a href="#friend"><span class="hover-definition-text" data-term="friend">friends</span></a>.
+                    Whenever you have the reasonable assumption that your life or the life of a friend is being endangered by 
+                    another player, you can defend yourself and claim self-defense (or defense of friends).
+                    If the attacker(s) are presumably together with other players (e.g. they're in the same vehicle),
+                    you are allowed to kill those other players.
+                </div>
+                <div>
+                    Some examples have been mentioned in the "Defense of Life" section above. Here we add a few more practical examples
+                    that apply to civilians only:
+                    <ul>
+                        <li>A player following you or staying nearby without an apparent reason (they're not talking or interacting), unless you're in <a href="#poi"><span class="hover-definition-text" data-term="poi">point of interest</span></a></li>
+                        <li>A player following you or staying nearby when they have revenge on you, or a clear reason to kill you</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <div class="subtitle">c. Defense of property</div>
+                <div>
+                    You're allowed to kill players in defense of your <a href="#property"><span class="hover-definition-text" data-term="property">property</span></a> and the property of your friends from theft, damage and trespassing.
+                    Examples of players you can kill in defense of your property:
+                    <ul>
+                        <li>A player steals your vehicle (or tries to)</li>
+                        <li>A player damages your vehicle (intentionally or not)</li>
+                        <li>A player enters your vehicle without your permission</li>
+                        <!-- <li>A player breaks into your warehouse or garage</li> -->
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <div class="subtitle">d. Provoking</div>
+                <div>
+                    You're allowed to kill players who provoke you <b>once, within the same <a href="#game_session"><span class="hover-definition-text" data-term="game_session">game session</span></a></b>.
+                    If they do one or more of the following things, then they are provoking you:
+                    <ul>
+                        <li>Insulting you, your <a href="#friend"><span class="hover-definition-text" data-term="friend">friends</span></a> or your crew</li>
+                        <li>Playing emotes that can be perceived as insults near you (middle finger, twerking, gang signs, and similar)</li>
+                        <li>Playing music or making loud/annoying noises, unless you're in a <a href="#poi"><span class="hover-definition-text" data-term="poi">point of interest</span></a></li>
+                        <li>Holding the horn or honking repeatedly, burning tires, or making other noises with vehicles with the intention to annoy, unless you're in a point of interest</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <div class="subtitle">e. Players in a redzone</div>
+                <div>
+                    If you are in a marked redzone you may kill other players that are occupying it.
+                    If the target leaves the redzone, you may not chase them out of it with the intent 
+                    to attack and/or kill, unless you have a reason to do so.
+                </div>
+            </div>
+            
+            <div>
+                <div class="subtitle">f. Players competing against you</div>
+                <div>
+                    You're also allowed to kill players in the following cases:
+                    <ul>
+                        <li>They are driving the most wanted vehicle</li>
+                        <li>They try to steal the same vehicle you are trying to steal</li>
+                        <li>They join a robbery you're doing without your consent, or it's reasonable to assume that they are going to</li>
+                        <li>They are currently robbing a store and you want to rob it too without splitting the revenue</li>
+                        <li>They are trying to kill the same player you're trying to kill or they stole your kill</li>
+                        <li>They are a drug dealer and are currently selling in a drug spot, you're a drug dealer too and want to use that spot</li>
+                        <!-- <li>They are carrying a money bag*</li> -->
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <div class="subtitle">g. Cops working against you</div>
+                <div>
+                    <p>
+                        You are always allowed to kill <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span> when they're working against you,
+                        or when you have a reasonable belief that they are.
+                    </p>
+                    <p>
+                        When you are an <b>innocent civilian</b>, you can kill cops who are stalking or following you 
+                        or your <a href="#friend"><span class="hover-definition-text" data-term="friend">friends</span></a>, unless you are in a <a href="#poi"><span class="hover-definition-text" data-term="poi">point of interest</span></a>.
+                    </p>
+                    
+                    <p>
+                        When you are a <a href="#criminal"><span class="hover-definition-text" data-term="criminal"><span class="criminal">wanted suspect</span></span></a>, or you're playing with wanted suspects,
+                        you can kill police officers in the following cases:
+                        </p><ul>
+                            <li>they are chasing or trying to pull you or your friends over</li>
+                            <li>they are shooting at or tasing you or your friends</li>
+                            <li>they are arresting one of your friends</li>
+                            <li>
+                                they are moving towards your location, and getting too close (within assault rifle range), 
+                                except when you are close to a police spawn location (police stations).
+                            </li>
+                        </ul>
+
+                        Once one of the conditions is met and you make the decision to eliminate the cop, you are allowed to 
+                        attack and kill them even if they backtrack and choose to flee.<br>
+                    <p></p>
+                    <p>
+                        Never attack and/or kill random <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span>, also known as "cop hunting", or you will get fined or banned.
+                    </p>
+                </div>
+            </div>
+            
+            <div>
+                <div class="subtitle">h. Paramedics working against you</div>
+                <div>
+                    You're allowed to attack and/or kill <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span> who are reviving or healing your 
+                    <a href="#enemy"><span class="hover-definition-text" data-term="enemy">enemies</span></a> or <a href="#opponent"><span class="hover-definition-text" data-term="opponent">opponents</span></a>, they recently revived one in your presence, 
+                    or you have a reasonable belief that they are going to revive one (e.g. stopping their vehicle near bodies, or staying near them).
+                    You are not allowed to take paramedics hostage and force them to work for you, you can only intimidate them not to revive your enemies or opponents.
+                    You are not allowed to attack or kill paramedics solely because they are reviving a friend of yours.
+                    Never attack and/or kill random <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span>, or you will get fined or banned.
+                </div>
+            </div>
+            
+            <br>
+            <h4 id="rdm_cops">Part Two - Police Officers</h4>
+            <div>
+                <i>The following sections only apply when you are a police officer.</i>
+            </div>
+
+            <div>
+                <div class="subtitle">i. Use of force as a police officer</div>
+                <div>
+                    You may only attack players with <b>lethal force</b> in the following cases:
+                    
+                    <ul>
+                        <li>Self-<a href="#defense">defense</a>, defense of other cops, and defense of non-<a href="#dangerous">dangerous</a> players</li>
+                        <li><a href="#mw"><span class="hover-definition-text" data-term="mw"><span class="most-wanted">Most wanted suspects</span></span></a>, unless they are surrendering<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> or cuffed</li>
+                        
+                        <!-- note mw surrender animation knees -->
+                        <div id="note[NOTE_ID]" class="note-content">
+                            <span class="note-id">[NOTE_ID]</span>
+                            <span class="note-date">24.08.2024</span>
+                            <span class="note-author">Profit</span>
+                            <p>By "surrendering", one must actually hold down "x" and start the animation. Just having your hands up or verbally stating that you surrender does not qualify.</p>
+                            <p>See the following reports and decisions: <a href="https://discord.com/channels/738534756538384499/1265710791299043372" target="_blank">HBerrA (358) - RDM</a> (24.07.2024 - didn't surrender) and <a href="https://discord.com/channels/738534756538384499/1250300125046112256" target="_blank">charlie reed (81) RDM as cop</a> (12.06.2024 - surrendered on knees and got shot).</p>
+                        </div>
+
+                        <li><span class="hover-definition-text" data-term="criminal"><span class="criminal">Suspects</span></span> who are seen holding a firearm, any type of blade, or brass knuckles</li>
+                        <li><span class="hover-definition-text" data-term="criminal"><span class="criminal">Suspects</span></span> who committed a violent crime in your presence (against a player or an NPC)</li>
+                        <li><span class="hover-definition-text" data-term="criminal"><span class="criminal">Suspects</span></span> who committed a violent crime very recently<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> and you saw the call, the log of crimes, or you were informed by another player</li>
+
+                        <!-- Very recently note-->
+                        <div id="note[NOTE_ID]" class="note-content">
+                            <span class="note-id">[NOTE_ID]</span>
+                            <span class="note-date">24.08.2024</span>
+                            <span class="note-author">Profit</span>
+                            <p>The interpretation of "very recently" is rather controversial. For a while, it was believed that if the crime happened 2 minutes ago or less, police could use lethal force against the suspect. This is currently not the case.</p>
+                            <p>Sasino, in a discord message dated 13.09.2023 stated the following: "[...] very recently usually means that the crim is still on the scene of that crime, or very close, and has a high probability to shoot."</p>
+                            <p>Sasino, in the same message, also gave this example: "[...] you get a call about a robber robbing a gas station, you get there and the robber is in the car but has just left the gas station, then it's ok to open fire. But if you chase someone for a while and then start shooting when it's convenient, that's not allowed."</p>
+                            <p>This rule was brought up in this suggestion: <a href="https://discord.com/channels/738534756538384499/1266824602642808993" target="_blank">Update the written rules [...]</a> (27.07.2024), where Sasino commented the following: "if you feel it's very recently then just explain why it is", "if you think a mod is being unreasonable just ask for a different mod", "or ask the mod to gather more opinions".</p>
+                            <p>It could seem that "very recently" is meant to be tied closely to the definition of a <a href="#threat">threat</a> based on Sasino's statements.</p>
+                            <p>One should be careful when invoking this rule as justification for use of lethal force as a police officer, as there are unclear pitfalls and gray areas that could result in a job ban.</p>
+                        </div>
+
+                        <li><span class="hover-definition-text" data-term="criminal"><span class="criminal">Suspects</span></span> who are obviously together with other armed or dangerous <span class="criminal">suspects</span></li>
+                        <li><span class="hover-definition-text" data-term="criminal"><span class="criminal">Suspects</span></span> who are
+                            <ul>
+                                <li>fleeing with a boat or an aircraft</li>
+                                <li>swimming or underwater<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button></li>
+
+                                <!--note swimming lethal force-->
+                                <div id="note[NOTE_ID]" class="note-content">
+                                    <span class="note-id">[NOTE_ID]</span>
+                                    <span class="note-date">24.08.2024</span>
+                                    <span class="note-author">Profit</span>
+                                    <p>This rule seems lenient in favor of police officers. In the decision linked below, a suspect had just started swimming in somewhat shallow waters, and the police officer was still authorized to kill them.</p>
+                                    <p>See this report and decision: <a href="https://discord.com/channels/738534756538384499/1265812087515381770" target="_blank">SNSTR | RARE OT - RDM as cop by baiting into water.</a> (25.07.2024)</p>
+                                </div>
+
+                                <li>camping on ladders out of stun range</li>
+                                <li>impossible to stun and cuff</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    Exceptions:
+                    <ul>
+                        <li>
+                            if you just joined an active situation, and cops were already shooting at a certain suspect,
+                            you may assume the suspect is dangerous and use deadly force as well. If it turns out that 
+                            the suspect was not a <a href="#threat"><span class="hover-definition-text" data-term="threat">threat</span></a>, you will not be responsible in this scenario.
+                        </li>
+                        <li>
+                            you may use your vehicle at <b>low speed</b> to stop a <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> that's fleeing on foot,
+                            and it's reasonably safe to do so without killing them.
+                        </li>
+                        <li>
+                            you may use your vehicle to chase and ram a suspect that's fleeing with a vehicle, with the intention of disabling it.
+                        </li>
+                        <li>
+                            you may use <a href="#lesslethal"><span class="hover-definition-text" data-term="lesslethal">less-lethal weapons</span></a> to stop unarmed fleeing 
+                            <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspects</span></span>. 
+                            You should avoid stunning, blinding with a flashbang or punching suspects who are standing still and complying with police commands, or are handcuffed;
+                            this is not a bannable offense, but you might get a warning, detonation or similar action.
+                        </li>
+                        <li>
+                            you may also use less-lethal weapons on suspects who are in a vehicle and refuse to get out after you 
+                            asked them to, but not on their vehicle's tires.
+                        </li>
+                        <li>
+                            you may also use less-lethal weapons on any civilian or suspect who you believe is trying to 
+                            uncuff a cuffed suspect, or help a suspect in non-violent ways, interfering with your
+                            arrest in any way that causes delay to it, walking on your police vehicle or around you, or blocking 
+                            the way and refusing to move.
+                        </li>
+                    </ul>
+                    
+                    <div>
+                        You are not allowed to willingly attack/kill other players in the following cases, except in self-defense:
+                    </div>
+
+                    <ul>
+                        <li>An innocent civilian</li>
+                        <li>Another <span class="hover-definition-text" data-term="player_cop"><span class="cop">cop</span></span></li>
+                        <li>A <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedic</span></span></li>
+                        <li>A <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> that is surrendering on their knees</li>
+                        <li>A <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> that is handcuffed (you can only stun them if they are running)</li>
+                        <li>A <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> that is in police custody</li>
+                    </ul>
+
+                    <div class="subtitle">j. Carjacking as a police officer</div>
+                    <div>
+                        You are not allowed to <span class="hover-definition-text" data-term="carjack"><b>carjack</b></span> an <span class="hover-definition-text" data-term="player_innocent">
+                            <b>innocent</span> <span class="hover-definition-text" data-term="player_civilian">civilian</b>, 
+                        a <span class="hover-definition-text" data-term="player_cop"><span class="cop">cop</span></span> or a <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedic</span></span>.
+                    </div>
+
+                    <div class="subtitle">k. Property damage as a police officer</div>
+                    <div>
+                        You are not allowed to damage the <b>unoccupied</b> vehicle of a civilian unless it's reasonable to think it's being used as part of a crime<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button>. 
+                        You are never allowed to damage the vehicle of another <span class="hover-definition-text" data-term="player_cop"><span class="cop">cop</span></span> or a 
+                        <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedic</span></span>.
+                    </div>
+                    <!-- note damage unoccupied vehicle cop-->
+                    <div id="note[NOTE_ID]" class="note-content">
+                        <span class="note-id">[NOTE_ID]</span>
+                        <span class="note-date">24.08.2024</span>
+                        <span class="note-author">Profit</span>
+                        <p>For instance, police may damage an unoccupied civilian owned vehicle parked outside of an active robbery if the officer(s) believe it is used "in a robbery/shootout".</p>
+                        <p>See this report and decision: <a href="https://discord.com/channels/738534756538384499/1242656188076785725" target="_blank">[SWAT] Tyler Durden (356)</a> (22.05.2024)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <br>
+            <h4 id="rdm_ems">Part Three - Paramedics</h4>
+            <div>
+                <i>The following sections only apply when you are a paramedic.</i>
+            </div>
+
+            <div>
+                <div class="subtitle">l. Use of force as a paramedic</div>
+                <div>
+                    You may <b>only</b> use lethal force on players in self-defense, defense of other <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span>.
+                    Paramedics have a duty to retreat: when the <a href="#threat"><span class="hover-definition-text" data-term="threat">threat</span></a> ends, you must stop shooting. 
+                    You cannot help <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span> in their crime-stopping duties (e.g. shooting at a criminal, or pursuing a criminal while a cop is with you), 
+                    but you must work together as <b>a single team</b> with different responsibilities.
+                </div>
+
+                <div class="subtitle">m. Carjacking as a paramedic</div>
+                <div>
+                    You are not allowed to <span class="hover-definition-text" data-term="carjack"><b>carjack</b></span> an 
+                    <b><span class="hover-definition-text" data-term="player_innocent">innocent</span> <span class="hover-definition-text" data-term="player_civilian">civilian</span></b>, 
+                    a <span class="hover-definition-text" data-term="player_cop"><span class="cop">cop</span></span> or a <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedic</span></span>.
+                </div>
+
+                <div class="subtitle">n. Property damage as a paramedic</div>
+                <div>
+                    You are not allowed to damage the <b>unoccupied</b> vehicle of other players.
+                </div>
+            </div>
+            
+            <br>
+            <h4 id="rdm_all">Part Four - All Players</h4>
+            <div>
+                <i>The following sections apply to all players, unless specified otherwise.</i>
+            </div>
+
+            <div>
+                <div class="subtitle">o. Most wanted</div>
+                <div>
+                    Players that are <a href="#mw"><span class="hover-definition-text" data-term="mw"><span class="most-wanted">most wanted</span></span></a> can be shot and killed on sight by all players <i>except paramedics</i>.
+                </div>
+            </div>
+            
+            <div>
+                <div class="subtitle">p. Players who agreed to be killed</div>
+                <div>
+                    If a player agreed to be killed by you, agreed to a duel or any other kind of deathmatch activity,
+                    or agreed to roleplay a scene in which one of the participant may be killed, then all the players 
+                    involved in that activity will have no protection, and no fault. If a crew is officially at war with
+                    another crew, then all the members are automatically involved in the activity.
+                </div>
+            </div>
+
+            <div>
+                <div class="subtitle">q. Unintentional kills</div>
+                <div>
+                    If you unintentionally damage or kill a player, but it was a careless or negligent act, you could be subject to moderation action (e.g.
+                    shooting in the direction of a player that you're not supposed to shoot at, and you saw they were there).
+                    The only exception is when the situation was completely out of your control (e.g. lag issues, players suddenly running in the
+                    middle of the street, or in front of your line of fire) or when a player uses a cuffed or AFK player as a human shield.
+                    In case of car accidents, whoever disregards basic traffic rules, such as driving on the wrong lane or jaywalking, is responsible
+                    for the damage or death.
+                    <br>
+                    Unintentional RDM must not be punished in the same measure as intentional RDM.
+                </div>
+            </div>
+            
+            <div>
+                <div class="subtitle">r. Associating with, enabling or facilitating RDM</div>
+                <div>
+                    Associating with a player that is committing RDM in your presence, such as sitting in their vehicle and not 
+                    trying to leave immediately after realizing what they are doing, is to be considered a violation of this rule.
+                </div>
+                <div>
+                    Enabling or facilitating RDM, such as being the driver of a player who is committing RDM and not stopping your
+                    car, leaving it, or driving away from their target is to be considered a violation of this rule.
+                </div>
+            </div>
+        </div>
+        
+        <div id="rule02">
+            <h3>2. Do not Cross-Team</h3>
+            <span class="hover-definition-text" data-term="player_cop"><span class="cop">Cops</span></span> and <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span> are a team, 
+            with different duties, and they are opponents to <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspects</span></span>. However, paramedics have a specific
+            duty within their team, which is not helping the cops arrest suspects.
+            
+            <div class="subtitle">a. When you play as a civilian</div>
+            <ul>
+                <li>You can't team up or work with <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span> and <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span>, with the exception of the scripted features</li>
+                <li>You can't help them in a fight (unless you have another valid reason to kill their target)</li>
+                <li>You can't help them get away from their opponents by driving them away</li>
+                <li>You can't be in a vehicle with a cop while they're performing their police duties or while you're committing crimes</li>
+            </ul>
+            
+            <div class="subtitle">b. When you play as a cop</div>
+            <ul>
+                <li>You can't team up or work with <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspects</span></span>, with the exception of the bribe scripted feature</li>
+                <li>You can't drive a wanted <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> anywhere, unless they are being held in custody</li>
+                <li>You can't help a <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> in a fight (unless you have another valid reason to kill their target)<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button></li>
+                
+                <!-- Note Target priority -->
+                <div id="note[NOTE_ID]" class="note-content">
+                    <span class="note-id">[NOTE_ID]</span>
+                    <span class="note-date">24.08.2024</span>
+                    <span class="note-author">Profit</span>
+                    <p>Officers will have to prioritize their threats if multiple suspects are actively shooting, but one must be careful when doing so. In the decision below, an officer chose to target the threat they deemed of highest priority first, and thereafter arresting the other threat. The officer recieved a 3 day job ban for cross teaming.</p>
+                    <p>See the following report and decision: <a href="https://discord.com/channels/738534756538384499/1260176793189748776" target="_blank">CMS x CrtlAltDel AND [ SWAT ] HAJENZ CROSS TEAMING</a> (09.07.2024)</p>
+                </div>
+
+                <li><span class="hover-definition-text" data-term="player_cop"><span class="cop">Cops</span></span> have the duty to protect life. You can't watch a <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> attack a civilian/cuffed suspect and do nothing</li>
+                <li>You can't watch <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspects</span></span> attack other <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span> or <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span> and do nothing</li>
+                <li>
+                    If you are transporting a passenger that is <b>not</b> one of the following:
+                    <ul>
+                        <li>a. a <span class="hover-definition-text" data-term="player_cop"><span class="cop">cop</span></span></li>
+                        <li>b. a <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> in custody</li>
+                    </ul>
+                    then you are not allowed to engage in <a href="#police_activity"><span class="hover-definition-text" data-term="police_activity">police activity</span></a> until they leave the vehicle
+                </li>
+                <li>If your passenger commits <span class="criminal">crimes</span>, you're expected to stop the vehicle and detain them</li>
+                <li>You must not prevent<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> another <span class="hover-definition-text" data-term="player_cop"><span class="cop">cop</span></span> from completing an arrest<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button>, 
+                    or attempt to arrest<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> or search<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> their <span class="hover-definition-text" data-term="criminal"><span class="criminal">cuffed suspect</span></span> without their permission</li>
+                
+                <!-- accept bribe block arrest-->
+                <div id="note[NOTE_ID]" class="note-content">
+                    <span class="note-id">[NOTE_ID]</span>
+                    <span class="note-date">24.08.2024</span>
+                    <span class="note-author">Profit</span>
+                    <p>Accepting a bribe from someone else's cuffed suspect is not punishable and does not count as "preventing" their arrest. See the bribe feature exception to crossteaming in <a href="#rule02">Rule 2</a>, letter "a", bullet point one, and letter "b", bullet point one.</p>
+                </div>
+
+                <!-- cuff after suspect revived -->
+                <div id="note[NOTE_ID]" class="note-content">
+                    <span class="note-id">[NOTE_ID]</span>
+                    <span class="note-date">24.08.2024</span>
+                    <span class="note-author">Profit</span>
+                    <p>If a suspect has been killed and revived, the principle of first come, first served is applied - meaning the first officer to be able to cuff the suspect is now entitled to them.</p>
+                    <p>See the following report and decision: <a href="https://discord.com/channels/738534756538384499/1259347952778874960" target="_blank">ARAB | Raylen TN - Arrest Stealing</a> (07.07.2024)</p>
+                </div>
+                
+                <!--note arrest steal beginning of video -->
+                <div id="note[NOTE_ID]" class="note-content">
+                    <span class="note-id">[NOTE_ID]</span>
+                    <span class="note-date">24.08.2024</span>
+                    <span class="note-author">Profit</span>
+                    <p>While the written rule seems open and broad, it appears to be enforced very differently from case to case.</p>
+                    <p>See the following report and decision: <a href="https://discord.com/channels/738534756538384499/1260416482618380360" target="_blank">jacobdavis978 (57) | STEALING ARREST</a> (10.07.2024). 
+                        In this situation, one police officer cuffed a suspect while a second police officer called in a transport for said suspect. 
+                        A moderator stated that since the second police officer had been on the scene since the beginning of the submitted video, it was not arrest stealing. 
+                        This is not reflected anywhere in the written rules.</p>
+
+                    <p>This exception seems to not apply to <i>searching</i> someone else's cuffed suspect. In the report below, the searching officer was not the same as the cuffing officer.
+                    Even though both officers were on the scene for effectively the duration of the video submitted by the reporter, the report was accepted.</p>
+                    <p>See the following report and decision: <a href="https://discord.com/channels/738534756538384499/1275302758672633939" target="_blank">charbel.al.khoury20 (222) - Stealing arrest</a> (20.08.2024)</p>
+                </div>
+                
+                <!--note search other's cuffed suspect-->
+                <div id="note[NOTE_ID]" class="note-content">
+                    <span class="note-id">[NOTE_ID]</span>
+                    <span class="note-date">24.08.2024</span>
+                    <span class="note-author">Profit</span>
+                    <p>Searching someone's cuffed suspect appears to consistently lead to a report being accepted.</p>
+                    <p>See the following reports and decisions: <a href="https://discord.com/channels/738534756538384499/1274888944646885406">Reimi (12) - Arrest Stealing</a> (19.08.2024 - searching someone else's cuffed suspect),
+                    and <a href="https://discord.com/channels/738534756538384499/1275302758672633939" target="_blank">charbel.al.khoury20 (222) - Stealing arrest</a> (20.08.2024)</p>
+                </div>
+
+            </ul>
+
+            <div class="subtitle">c. When you play as a paramedic</div>
+            <ul>
+                <li>You can't team up or work with <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspects</span></span>, with the exception of the revive and heal scripted features.</li>
+                <li>You can't work as a private medic for a specific civilian or group of civilians.</li>
+                <li>You can't help a <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> in a fight (unless you have another valid reason to kill their target)</li>
+                <li>You can't drive a <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> away from their enemies. If their enemies or the police are after your passenger, 
+                    you're expected to stop the vehicle immediately and allow them to arrest them or fight</li>
+                <li>You're not allowed to help <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span> in their crime-stopping duties</li>
+                <li>
+                    You're not allowed to revive <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspects</span></span> when they are 
+                    involved in a shooting with the <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span>, 
+                    until the cops outnumber the suspects and the situation is under control
+                </li>
+            </ul>
+
+            Don't team up with or help opponents or you will get fined or banned.<br>
+        </div>
+
+        <div id="rule03">
+            <h3>3. Do not Cheat</h3>
+            <p>
+                Using any kind of <span class="hover-definition-text" data-term="modification">modification</span> or external program<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> that gives you an unfair advantage is not allowed, 
+                including, but not limited to: mod menus, wallhacks, noclip, health lock, damage modifiers.
+                Knowingly teaming up with users of such modifications is not allowed. 
+                If you see a cheater, please, report them. Don't cheat or you will get banned and your progress could get reset.
+            </p>
+
+            <!--note VPN use -->
+            <div id="note[NOTE_ID]" class="note-content">
+                <span class="note-id">[NOTE_ID]</span>
+                <span class="note-date">24.08.2024</span>
+                <span class="note-author">Profit</span>
+                <p>While it could be argued that the use of a VPN as an "external program" that could give an "unfair advantage" in the form of ping abuse, VPNs as a whole are allowed.</p>
+                <p>Sasino has explained that he does not hold ping abuse in high regard, but still wants VPNs allowed because some people prefer to use them for legitimate purposes, i.e. a security measure against doxxing.</p>
+                <p>You can find the message here: <a href="https://discord.com/channels/738534756538384499/1124760450970685554/1125196084638122116" target="_blank">"Using [a VPN] to teleport around is only for pathetic losers who deserve not to play [...]</a> (03.07.2023)</p>
+            </div>
+
+
+            <h4>Exceptions</h4>
+            <p>
+                Some mods may give the player a very mild advantage, but they are
+                widely used by the community, so we decided to add exceptions for them.<br>
+                </p><ul>
+                    <li>any mod that doesn't give you any advantage over other players</li>
+                    <li>persistent crosshairs</li>
+                    <li>tracer mods</li>
+                    <li>lightning mods</li>
+                    <li>reshade packs, unless they give you an obvious advantage</li>
+                    <li>skydome textures</li>
+                    <li>any mod that's intended to enhance the frame rate, unless they remove objects or collisions</li>
+                    <li>changing the FOV</li>
+                    <li>macros that send simple text, commands or the key to offer drugs/services</li>
+                    <li>kill special effects</li>
+                </ul>
+            <p></p>
+        </div>
+        
+        <div id="rule04">
+            <h3>4. Do not Exploit</h3>
+            <p>
+                Exploiting any glitch, bug, script error, unintentional outcome of a certain system, or money/XP loophole of the
+                server or GTA V to your advantage is not allowed. Don't exploit or you will get banned and possibly get your progress reset.
+            </p>
+
+            <p>
+                Some of the prohibited exploits include:
+                </p><ul>
+                    <li>using emotes (animations) mid-combat, to clip through walls/floor or to avoid a certain negative outcome</li>
+                    <li>skipping script animations such as bandage, medkit and so on</li>
+                    <li>intentionally getting other players a wanted level in an unfair way</li>
+                    <li>staying on ladders as a non-threat suspect to avoid being stunned</li>
+                    <li>spelling banned words differently to bypass the chat filter</li>
+                    <li>using any GTA V physics glitch (ghost peeking<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button>, bike gliding, and so on)</li>
+
+                <!--note ghost peek -->
+                <div id="note[NOTE_ID]" class="note-content">
+                    <span class="note-id">[NOTE_ID]</span>
+                    <span class="note-date">24.08.2024</span>
+                    <span class="note-author">Profit</span>
+                    <p>"Ghost peeking" is an exploit in which one abuses GTA V's third-person POV to be able to shoot at another player without showing much or any of one's own player model.</p>
+                    <p>See the following report and decision: <a href="https://discord.com/channels/738534756538384499/1268567487654662255">[SEK] Extron (233) - Ghost Peeking</a> (01.08.2024)</p>
+                </div>
+
+                </ul>
+
+                This list is non-exhaustive, and the staff may ban you for exploiting on a case-by-case basis.
+            <p></p>
+            <p>
+                Hacking, reverse engineering, or any usage of our systems in a way other than the way
+                it was intended to be used will cause you to get permanently banned from our platform.
+            </p>
+            <p>
+                If you find an exploit, you should report it in a private support ticket. If you don't want to report it, 
+                that's fine but sharing it with anyone else or encouraging them to abuse it is not allowed and will get you a ban.
+            </p>
+        </div>
+        
+        <div id="rule05">
+            <h3>5. Do not Combat Log</h3>
+            <p>
+                Leaving the server to avoid being killed, arrested, penalized by an admin or any other negative consequence that would 
+                otherwise have happened is not allowed. It doesn't matter whether you had spawn protection or not.
+            </p>
+
+            <p>
+                </p><h4>Exceptions</h4>
+                You can combat log legally in the following cases:
+                <ul>
+                    <li>A cheater is using disallowed mods to kill you</li>
+                    <li>You've been in police custody for a reasonably long period of time and the cops are not taking you to jail, or unreasonably taking you to a far jail</li>
+                    <li>A police officer is trying to kill you against the rules</li>
+                    <li>A paramedic is trying to kill you against the rules</li>
+                </ul>
+
+                Since civilian on civilian RDM is hard to prove, combat logging is not allowed in those cases.
+                Do not log out mid-combat in any other situation or you will be fined or banned.
+            <p></p>
+        </div>
+        
+        <div id="rule06">
+            <h3>6. Do not Evade Bans</h3>
+            If you are banned from the server you are expected to wait the full duration of your ban. Circumventing the ban in any way is not allowed;
+            if you have multiple accounts, don't use any of them when one is banned, or your ban time will be doubled.
+        </div>
+        
+        <div id="rule07">
+            <h3>7. Do not Lie to Staff</h3>
+            You cannot lie to the staff in the following contexts:
+            <ul>
+                <li>When reporting a player for breaking a rule</li>
+                <li>When appealing a ban or any other kind of infraction</li>
+                <li>When claiming a prize, refund, or any kind of bonus</li>
+            </ul>
+            That doesn't exclusively apply to tickets: it can be anywhere as long as a staff member is involved in the conversation.
+            If you are proven to have knowingly lied to a staff member in any of those contexts you will get banned.
+        </div>
+        
+        <div id="rule08">
+            <h3>8. Do not Impersonate Staff</h3>
+            Impersonating a staff member is not allowed under any circumstance, and will get you immediately banned.
+            Some common occurrences that fall into staff impersonation are:
+            <ul>
+                <li>Claiming to be part of the staff, or to have been part of the staff in the past</li>
+                <li>Claiming to have the power to ban or apply any other kind of account penalty on someone</li>
+                <li>Threatening in first person to ban or apply any other kind of account penalty on someone</li>
+                <li>Driving a staff vehicle, wearing staff clothing or anyway having the appearance of a staff member</li>
+                <li>Using staff powers when not authorized (e.g. an ex-staff member whose permissions haven't been removed yet)</li>
+            </ul>
+        </div>
+        
+        <div id="rule09">
+            <h3>9. Do not Advertise</h3>
+            Advertising anything that isn't directly related to Cops and Robbers V is not allowed. Advertising means exposing a website, server, community, product
+            or any other kind of entity or object in mass with the purpose of attracting users towards it. A simple mention doesn't equate to advertising.
+            Advertising cheats or encouraging players to cheat will get you banned in all cases.
+        </div>
+        
+        <div id="rule10">
+            <h3>10. Maintain an Appropriate Behavior</h3>
+            <div>
+                <div class="subtitle">a. Underage users</div>
+                <div>
+                    <span class="important">Behave appropriately with users below the age of 18</span>, or you will be permanently banned from the 
+                    platform with no possibility of appeal. You are not allowed to engage in any kind of sexual or obscene talk or activity with 
+                    underage users. If you are not sure of someone's age, assume that they are underage to avoid problems. If you don't use voice 
+                    chat we will assume that you are not a minor, so refrain from breaking this rule.
+                </div>
+                
+                <div class="subtitle">b. Harming or threatening to harm</div>
+                <div>
+                    Do not do (or threaten anyone with) these harmful things:
+                    <ul>
+                        <li>Real-life violence or sexual assault</li>
+                        <li>Doxxing (exposing someone's name, address, phone number or other identifying information)</li>
+                        <li>Hacking or other attacks (such as DDoS)</li>
+                    </ul>
+                    These actions can result in a full termination of your account.
+                    Threats that have enough potential to be real may be reported to your local police department.
+                </div>
+                
+                <div class="subtitle">c. Illegal subjects</div>
+                <div>
+                    You should avoid discussing the following subjects at most times:
+                    <ul>
+                        <li>Real-life violence</li>
+                        <li>Sexual assault</li>
+                        <li>Child abuse and pedophilia</li>
+                        <li>Suicide and self-harm</li>
+                        <li>Mass murder, terrorism and genocide</li>
+                        <li>Animal abuse</li>
+                        <li>Illegal hacking and DDoS</li>
+                    </ul>
+
+                    Avoid publicly accusing other users of any of these things. Opening a private ticket to report 
+                    bad conduct of the types discussed here is preferred.
+                </div>
+                <div>
+                    You must not talk in a positive way of those subjects otherwise you will get banned.
+                </div>
+                
+                <div class="subtitle">d. Discriminating</div>
+                <div>
+                    Do not discriminate people based on:
+                    <ul>
+                        <li>Religious beliefs</li>
+                        <li>National origin</li>
+                        <li>Race</li>
+                        <li>Sex</li>
+                        <li>Sexual orientation</li>
+                        <li>Disabilities<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button></li>
+                    </ul>
+                    Don't use discriminatory terms to define or refer to people. Avoid blasphemy when talking about religion.
+                </div>
+                <!-- r-word allowed -->
+                <div id="note[NOTE_ID]" class="note-content">
+                    <span class="note-id">[NOTE_ID]</span>
+                    <span class="note-date">24.08.2024</span>
+                    <span class="note-author">Profit</span>
+                    <p>While the rules state you are not allowed to use "discriminatory terms to [...] refer to people", you are allowed to call someone "retarded". 
+                        This is a somewhat recent change, as it was punishable as recently as February, see report below.</p>
+                    <p>See the following report and decision: <a href="https://discord.com/channels/738534756538384499/1208904431958237245" target="_blank">r slur OTF | Tek -id 288</a> (18.02.2024). 
+                        In the following message in general chat, a moderator called someone "retarrd", illustrating that it is no longer actionable: <a href="https://discord.com/channels/738534756538384499/738534756538384504/1244909240775344189" target="_blank">"Fuck this retarrd"</a> (28.05.2024)</p>
+                </div>
+                
+                <div class="subtitle">e. Cursing and suicide encouragement</div>
+                <div>
+                    Do not wish any of these things to anyone or their family:
+                    <ul>
+                        <li>Death</li>
+                        <li>Illness</li>
+                        <li>Injury</li>
+                        <li>Violence</li>
+                        <li>Serious misfortune</li>
+                        <li>Suicide</li>
+                    </ul>
+                    This kind of language is off limits and it won't be allowed here.
+                </div>
+                
+                <div class="subtitle">f. Sexual harassment</div>
+                <div>
+                    You must not sexually harass other users over text, voice chat or radio. Sexual speech is only allowed in private without 
+                    the presence of underage users. Using the voice chat in a sexual manner in public spaces with players that you don't know can
+                    result in a ban. If you are being harassed but it's not sexual, use the /block feature.
+                </div>
+                
+                <div class="subtitle">g. Disturbing and disrupting</div>
+                <div>
+                    You're allowed to play and express yourself in the game, however, you're not allowed to disturb other users while doing so. Do not:
+                    <ul>
+                        <li>spam or flood the global text chat</li>
+                        <li>scream or play loud or distorted noises and voices</li>
+                        <li>use the radio for purposes other than intended</li>
+                        <li>blocking access to an area for no reason other than disrupting its normal usage</li>
+                    </ul>
+                </div>
+                <div>
+                    You are allowed to play music in an area where most of the present players approve. If you move to an area and players 
+                    that are already there ask you to turn it down, you must turn it down or move away. If other players come to your location
+                    where you were already playing the music, then they must move if they don't wanna listen to it, except if the location is
+                    usually crowded, such as spawn locations and popular stores.
+                </div>
+                
+                <div class="subtitle">h. Disrespecting moderators</div>
+                <div>
+                    You must not disrespect a staff member that is actively moderating by insulting them, 
+                    or otherwise provoking them or challenging them to punish you.
+                    This can get you muted, fined, kicked and even banned in more severe cases. 
+                    This rule doesn't apply if the moderator was involved in the conflict in a 
+                    negative way; they must have shown a respectful attitude during the conversation.
+                </div>
+                
+                <div class="subtitle">i. Scamming</div>
+                <div>
+                    When you agree on a deal that involves trading in-game items and currency, you must complete the deal or give back what you have  
+                    received and you must not scam or deceive the other party. The server is not responsible for scams, and we don't guarantee the
+                    scammed user will get their belongings back.
+                </div>
+                
+                <div class="subtitle">j. Selling in-game items or currency for real-world currency</div>
+                <div>
+                    You must not trade, sell or buy any in-game item or currency for real currency or anything that has value outside of Cops and Robbers V. 
+                    This includes cryptocurrencies and paid services such as Steam Wallet and Discord Nitro. You are not allowed to transfer 
+                    your personal Cops and Robbers V account to another person. You are only allowed to trade in-game currency for in-game items.
+                    You are allowed to provide <b>services</b>, such as clothing design, for real money as long as you have a Tebex store 
+                    and comply with the FiveM ToS.
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <div>
+            <small style="font-style:italic;">* Some features aren't available yet in the game, but the rules regarding them have been written in advance.</small>
+        </div>
+    
+    </div>
+
+
+    <!-- - - - INTERACTIVITY - - - -->
+
+    <!-- INDEX BUTTON -->
+    <button onclick="toggleIndexBox()" id="indexBtn" title="Show index">←</button>
+    <!-- BUTTON TO GO TO TOP -->
+    <button onclick="scrollToTop()" id="toTopBtn" title="Go to the top">↑</button>
+    <!-- INDEX BOX -->
+    <div id="indexBox">
+        <div id="index-content">
+            <!-- Content copied from contentIndex will appear here -->
+        </div>
+    </div>
+    <!-- OVERLAY BUTTON - ALL NOTES -->
+    <button id="showNotesBtn" class="overlay-button" title="Show all notes">📄</button>
+    <!-- Overlay Box -->
+    <div id="notesOverlay" class="overlay">
+        <div class="overlay-content">
+            <span class="close-btn">&times;</span>
+            <h2>All Notes</h2>
+            <div id="allNotesContent"></div>
+        </div>
+    </div>
+
+    <!-- TOOLTIP TOGGLE -->
+    <button id="toggleTooltipsBtn" title="Toggle definition tooltips">🗨️</button>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
