@@ -94,7 +94,7 @@ body {
 /* Button to go to top of page */
 #toTopBtn {
     position: fixed;
-    bottom: 20px;
+    bottom: 155px;
     right: 20px;
     z-index: 99;
     font-size: 18px;
@@ -106,6 +106,8 @@ body {
     padding: 10px 15px;
     border-radius: 5px;
     display: none; /* Hidden by default */
+    width: 50px;
+    height: 40px;
 }
 
 #toTopBtn:hover {
@@ -116,9 +118,8 @@ body {
 #indexBtn {
     position: fixed;
     bottom: 20px; 
-    right: 60px;
+    right: 20px;
     z-index: 99;
-    width: 50px;
     font-size: 18px;
     background-color: #555;
     color: white;
@@ -128,6 +129,8 @@ body {
     padding: 10px 15px;
     border-radius: 5px;
     display: none; 
+    width: 50px;
+    height: 40px;
 }
 
 #indexBtn:hover {
@@ -139,7 +142,7 @@ body {
     display: none; 
     position: fixed;
     bottom: 20px;
-    right: 110px;
+    right: 75px;
     width: 250px;
     background-color: #555;
     border: 1px solid #ddd;
@@ -183,6 +186,8 @@ body {
     padding: 6px;
     border-radius: 5px;
     cursor: pointer;
+    width: 50px;
+    height: 40px;
 }
 
 .overlay-button:hover {
@@ -284,15 +289,16 @@ table {
 #toggleTooltipsBtn {
     font-size: 18px;
     position: fixed;
-    width: 50px;
-    right: 60px;
-    bottom: 65px;
+    right: 20px;
+    bottom: 110px;
     background-color: #555;
     border-color: #555;;
     padding: 6px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 50px;
+    height: 40px;
 }
 
 #toggleTooltipsBtn:hover {
