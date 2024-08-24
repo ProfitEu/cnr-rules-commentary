@@ -64,6 +64,77 @@ function initializeNotes() {
     });
 }
 
+// - - - DEFINITIONS PULLED FROM TABLE - USED IN TOOLTIPS - - - //
+let tooltipsEnabled = false; // Flag to check if tooltips are enabled
+// Function to initialize hover tooltips
+function initializeTooltips() {
+    document.querySelectorAll('.hover-definition-text').forEach(element => {
+        element.addEventListener('mouseover', function() {
+            if (tooltipsEnabled) {
+                const term = this.getAttribute('data-term');
+                const tooltipContent = document.querySelector(`#table_definitions #${term}`);
+                
+                if (tooltipContent) {
+                    const cells = tooltipContent.getElementsByTagName('td');
+                    if (cells.length >= 2) {
+                        // Create the tooltip text with ": " separator
+                        const tooltipText = `${cells[0].textContent}: ${cells[1].textContent}`;
+                        this.setAttribute('data-hover', tooltipText);
+                        this.classList.add('show-tooltip'); // Show tooltip
+                    }
+                }
+            }
+        });
+        
+        element.addEventListener('mouseout', function() {
+            this.classList.remove('show-tooltip'); // Hide tooltip on mouse out
+        });
+    });
+}
+
+
+
+// - - - NOTE LIST OVERLAY BOX - - - //
+document.addEventListener('DOMContentLoaded', () => {
+    const showNotesBtn = document.getElementById('showNotesBtn');
+    const notesOverlay = document.getElementById('notesOverlay');
+    const closeBtn = document.querySelector('.close-btn');
+    const allNotesContent = document.getElementById('allNotesContent');
+    const notes = document.querySelectorAll('.note-content');
+
+    // Function to open the overlay and show all notes
+    function showNotesOverlay() {
+        // Clear any existing content
+        allNotesContent.innerHTML = '';
+
+        // Append all note contents to the overlay
+        notes.forEach(note => {
+            const noteClone = note.cloneNode(true);
+            noteClone.classList.add('expanded'); // Ensure notes are expanded in the overlay
+            allNotesContent.appendChild(noteClone);
+        });
+
+        notesOverlay.style.display = 'block';
+    }
+
+    // Function to close the overlay
+    function closeNotesOverlay() {
+        notesOverlay.style.display = 'none';
+    }
+
+    // Event listeners
+    showNotesBtn.addEventListener('click', showNotesOverlay);
+    closeBtn.addEventListener('click', closeNotesOverlay);
+
+    // Close the overlay when clicking outside of the content area
+    window.addEventListener('click', function(event) {
+        if (event.target === notesOverlay) {
+            closeNotesOverlay();
+        }
+    });
+});
+
+
 
 
 // - - - INDEX UPDATE AND INTERACTIVE BUTTONS - - - //
@@ -128,6 +199,23 @@ document.addEventListener('DOMContentLoaded', () => {
     copyContentIndex();
     initializeNotes(); // Assign IDs and update notes on page load
 
+    // Add click event listener to the document
+    document.addEventListener('click', handleClickOutside);
+});
+
+
+
+// - - - DEFINITIONS TOGGLE BUTTON - - - //
+// Toggle hover tooltips feature
+function toggleTooltips() {
+    tooltipsEnabled = !tooltipsEnabled; // Toggle the flag
+}
+
+// Add event listener for the toggle button
+document.getElementById('toggleTooltipsBtn').addEventListener('click', toggleTooltips);
+
+// Initialize tooltips on page load
+document.addEventListener('DOMContentLoaded', initializeTooltips);
     // Add click event listener to the document
     document.addEventListener('click', handleClickOutside);
 });
