@@ -70,7 +70,7 @@
         <!-- DEFINITIONS -->
         <div id="definitions">
             <h3>Definitions</h3>
-            <table class="table">
+            <table class="table" id="table_definitions">
                 <thead>
                     <tr><th>Term</th><th>Definition</th></tr>
                 </thead>
@@ -78,30 +78,30 @@
                     <tr><td>User</td><td> a physical person that's registered on the platform</td></tr>
                     <tr><td>Player</td><td> a human-controlled character</td></tr>
                     <tr><td>NPC</td><td> an AI-controlled character</td></tr>
-                    <tr id="friend"><td>Friend</td><td> a player that you like and you had at least one positive interaction with</td></tr>
-                    <tr id="enemy"><td>Enemy</td><td> a player that you dislike and you had at least one negative interaction with</td></tr>
-                    <tr id="opponent"><td>Opponent</td><td> a player whose game objective conflicts with yours</td></tr>
-                    <tr id="game_session"><td>Game session</td><td>a game week, starting Sunday 00:00 and ending whenever the server stops or restarts</td></tr>
-                    <tr><td>Weapon</td><td> a tool that can give damage to players (guns, knives, melee weapons)</td></tr>
-                    <tr id="lesslethal"><td>Less-lethal weapon</td><td> a tool that's designed to neutralize or disorient a player without giving them damage, currently: the Stun Gun and the Flashbang</td></tr>
-                    <tr id="attack"><td>To attack</td><td> to hit, shoot at, or ram a player or the vehicle they're inside or on its roof, intentionally or negligently</td></tr>
-                    <tr id="defense"><td>To defend (life)</td><td> to use force in response to a threat or an imminent danger to life by another player</td></tr>
-                    <tr id="threat"><td>Threat (in-game)</td><td>an endangerment by another player's behavior. Its duration is short by nature, it's no longer called a threat when the danger stops existing.</td></tr>
-                    <tr id="dangerous"><td>Dangerous</td><td>a player who's a threat may also be described as dangerous</td></tr>
-                    <tr id="poi"><td>Points of interest</td><td>stores, hospitals, police stations, mechanic shops. In general, places where all players have a legitimate reason to go and stay. You don't have to be inside the building.</td></tr>
-                    <tr><td>To carjack</td><td> to drag someone out of their vehicle (and optionally, steal it)</td></tr>
-                    <tr id="property"><td>Your property</td><td> your money, your personal vehicles, the vehicles you're currently using or you parked nearby, your home, your business, your items</td></tr>
-                    <tr><td>Innocent</td><td> a player whose wanted level is 0</td></tr>
-                    <tr><td>Civilian</td><td> a player that has the ability to gain or lose wanted level</td></tr>
-                    <tr id="criminal"><td>Criminal/suspect</td><td> a player that has a wanted level of one star or more, and their name is yellow, orange or red</td></tr>
-                    <tr id="mw"><td>Most wanted</td><td> a suspect that has a 5 star wanted level</td></tr>
-                    <tr><td>Cop</td><td> a player that has the ability to arrest suspects</td></tr>
-                    <tr><td>Paramedic</td><td> a player that has the ability to revive players</td></tr>
-                    <tr id="police_activity"><td>Police Activity</td><td>a pursuit, a shootout, or any attempt to stop or fight a crime</td></tr>
-                    <tr><td>Staff</td><td> testers, designers, developers, moderators, admins, managers, co-owners, owners</td></tr>
-                    <tr><td>Scripted feature</td><td> a feature that's built into the game/server, as opposed to player-created scenarios (RP)</td></tr>
-                    <tr><td>Modification</td><td> an external addition to the game</td></tr>
-                    <tr><td>Bug</td><td> a feature that doesn't work the way it is intended to</td></tr>
+                    <tr data-term="friend" id="friend"><td>Friend</td><td> a player that you like and you had at least one positive interaction with</td></tr>
+                    <tr data-term="enemy" id="enemy"><td>Enemy</td><td> a player that you dislike and you had at least one negative interaction with</td></tr>
+                    <tr data-term="opponent" id="opponent"><td>Opponent</td><td> a player whose game objective conflicts with yours</td></tr>
+                    <tr data-term="game_session" id="game_session"><td>Game session</td><td>a game week, starting Sunday 00:00 and ending whenever the server stops or restarts</td></tr>
+                    <tr data-term="weapon" id="weapon"><td>Weapon</td><td> a tool that can give damage to players (guns, knives, melee weapons)</td></tr>
+                    <tr data-term="lesslethal" id="lesslethal"><td>Less-lethal weapon</td><td> a tool that's designed to neutralize or disorient a player without giving them damage, currently: the Stun Gun and the Flashbang</td></tr>
+                    <tr data-term="attack" id="attack"><td>To attack</td><td> to hit, shoot at, or ram a player or the vehicle they're inside or on its roof, intentionally or negligently</td></tr>
+                    <tr data-term="defense" id="defense"><td>To defend (life)</td><td> to use force in response to a threat or an imminent danger to life by another player</td></tr>
+                    <tr data-term="threat" id="threat"><td>Threat (in-game)</td><td>an endangerment by another player's behavior. Its duration is short by nature, it's no longer called a threat when the danger stops existing.</td></tr>
+                    <tr data-term="dangerous" id="dangerous"><td>Dangerous</td><td>a player who's a threat may also be described as dangerous</td></tr>
+                    <tr data-term="poi" id="poi"><td>Points of interest</td><td>stores, hospitals, police stations, mechanic shops. In general, places where all players have a legitimate reason to go and stay. You don't have to be inside the building.</td></tr>
+                    <tr data-term="carjack" id="carjack"><td>To carjack</td><td> to drag someone out of their vehicle (and optionally, steal it)</td></tr>
+                    <tr data-term="property" id="property"><td>Your property</td><td> your money, your personal vehicles, the vehicles you're currently using or you parked nearby, your home, your business, your items</td></tr>
+                    <tr data-term="player_innocent" id="player_innocent"><td>Innocent</td><td> a player whose wanted level is 0</td></tr>
+                    <tr data-term="player_civilian" id="player_civilian"><td>Civilian</td><td> a player that has the ability to gain or lose wanted level</td></tr>
+                    <tr data-term="criminal" id="criminal"><td>Criminal/suspect</td><td> a player that has a wanted level of one star or more, and their name is yellow, orange or red</td></tr>
+                    <tr data-term="mw" id="mw"><td>Most wanted</td><td> a suspect that has a 5 star wanted level</td></tr>
+                    <tr data-term="player_cop" id="player_cop"><td>Cop</td><td> a player that has the ability to arrest suspects</td></tr>
+                    <tr data-term="player_medic" id="player_medic"><td>Paramedic</td><td> a player that has the ability to revive players</td></tr>
+                    <tr data-term="police_activity" id="police_activity"><td>Police Activity</td><td>a pursuit, a shootout, or any attempt to stop or fight a crime</td></tr>
+                    <tr data-term="staff" id="staff"><td>Staff</td><td> testers, designers, developers, moderators, admins, managers, co-owners, owners</td></tr>
+                    <tr data-term="scriptedfeature" id="scriptedfeature"><td>Scripted feature</td><td> a feature that's built into the game/server, as opposed to player-created scenarios (RP)</td></tr>
+                    <tr data-term="modification" id="modification"><td>Modification</td><td> an external addition to the game</td></tr>
+                    <tr data-term="bug"><td>Bug</td><td> a feature that doesn't work the way it is intended to</td></tr>
                 </tbody>
             </table>
         </div>
@@ -109,7 +109,7 @@
         <!-- Rule 1 - DO NOT RDM -->
         <div id="rule01">
             <h3>1. Do not RDM</h3>
-            Attacking<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> or killing other players for no valid reason, defined here as RDM, is not allowed on this server. 
+            <a href="#attack"><span class="hover-definition-text" data-term="attack">Attacking</span></a><button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> or killing other players for no valid reason, defined here as RDM, is not allowed on this server. 
             You may not kill any other player except when allowed by these rules.
 
             <!-- Note Attacking RDM -->
@@ -117,7 +117,7 @@
                 <span class="note-id">[NOTE_ID]</span>
                 <span class="note-date">23.08.2024</span>
                 <span class="note-author">Profit</span>
-                <p>Contrary to what this written rule and the definition of "Attack" in the <a href="#attack">definitions</a> above would have one believe, to "shoot at" someone seems to not qualify as a rule break. The player on the receiving end must actually take damage for the "attack" rule to apply.</p>
+                <p>Contrary to what this written rule and the definition of "Attack" in the definitions above would have one believe, to "shoot at" someone seems to not qualify as a rule break. The player on the receiving end must actually take damage for the "attack" rule to apply.</p>
                 <p>See this report and decision: <a href="https://discord.com/channels/738534756538384499/1254953016105238609" target="_blank">TXC | Warzox (276) - RDM</a> (25.06.2024)</p>
                 <p>This was also brought up in the following suggestion: <a href="https://discord.com/channels/738534756538384499/1266824602642808993" target="_blank">Update the written rules [...]</a> (27.07.2024)</p>
             </div>
@@ -126,7 +126,7 @@
 
             <h4 id="dol">What is Defense of Life</h4>
             <div>
-                Defense of life (short: DoL, includes self-defense and defense of other players) is defined <a href="#defense">here</a> as using force in response to a <a href="#threat">threat</a>.
+                Defense of life (short: DoL, includes self-defense and defense of other players) is defined <a href="#defense"><span class="hover-definition-text" data-term="defense">here</span></a> as using force in response to a <a href="#threat"><span class="hover-definition-text" data-term="threat">threat</span></a>.
                 Oftentimes, players are confused as to what constitutes a threat, so we have created this new paragraph with practical examples.
                 The following players can be considered a threat to you, or to someone else that you have the right to defend:
                 <ul>
@@ -152,9 +152,9 @@
             <div>
                 <div class="subtitle">a. Revenge</div>
                 <div>
-                    Being <a href="#attack">attacked</a>, arrested, killed, robbed, or getting your <a href="#property">property</a> 
+                    Being <a href="#attack"><span class="hover-definition-text" data-term="attack">attacked</span></a>, arrested, killed, robbed, or getting your <a href="#property"><span class="hover-definition-text" data-term="property">property</span></a> 
                     damaged, stolen or seized gives you the right to attack and kill the other player(s) on sight <b>once, within the 
-                    same <a href="#game_session">game session</a></b>. This includes any failed attempts to do those things. If you get 
+                    same <a href="#game_session"><span class="hover-definition-text" data-term="game_session">game session</span></a></b>. This includes any failed attempts to do those things. If you get 
                     attacked again, your right to obtain revenge is reinstated. The chain of revenge stops when either of the two 
                     players stops seeking their revenge.
                 </div>
@@ -177,7 +177,7 @@
             <div>
                 <div class="subtitle">b. Self-defense and defense of friends</div>
                 <div>
-                    You're allowed to kill an attacker in self-defense or in defense of your <a href="#friend">friends</a>.
+                    You're allowed to kill an attacker in self-defense or in defense of your <a href="#friend"><span class="hover-definition-text" data-term="friend">friends</span></a>.
                     Whenever you have the reasonable assumption that your life or the life of a friend is being endangered by 
                     another player, you can defend yourself and claim self-defense (or defense of friends).
                     If the attacker(s) are presumably together with other players (e.g. they're in the same vehicle),
@@ -187,7 +187,7 @@
                     Some examples have been mentioned in the "Defense of Life" section above. Here we add a few more practical examples
                     that apply to civilians only:
                     <ul>
-                        <li>A player following you or staying nearby without an apparent reason (they're not talking or interacting), unless you're in <a href="#poi">point of interest</a></li>
+                        <li>A player following you or staying nearby without an apparent reason (they're not talking or interacting), unless you're in <a href="#poi"><span class="hover-definition-text" data-term="poi">point of interest</span></a></li>
                         <li>A player following you or staying nearby when they have revenge on you, or a clear reason to kill you</li>
                     </ul>
                 </div>
@@ -196,7 +196,7 @@
             <div>
                 <div class="subtitle">c. Defense of property</div>
                 <div>
-                    You're allowed to kill players in defense of your <a href="#property">property</a> and the property of your friends from theft, damage and trespassing.
+                    You're allowed to kill players in defense of your <a href="#property"><span class="hover-definition-text" data-term="property">property</span></a> and the property of your friends from theft, damage and trespassing.
                     Examples of players you can kill in defense of your property:
                     <ul>
                         <li>A player steals your vehicle (or tries to)</li>
@@ -210,12 +210,12 @@
             <div>
                 <div class="subtitle">d. Provoking</div>
                 <div>
-                    You're allowed to kill players who provoke you <b>once, within the same <a href="#game_session">game session</a></b>.
+                    You're allowed to kill players who provoke you <b>once, within the same <a href="#game_session"><span class="hover-definition-text" data-term="game_session">game session</span></a></b>.
                     If they do one or more of the following things, then they are provoking you:
                     <ul>
-                        <li>Insulting you, your <a href="#friend">friends</a> or your crew</li>
+                        <li>Insulting you, your <a href="#friend"><span class="hover-definition-text" data-term="friend">friends</span></a> or your crew</li>
                         <li>Playing emotes that can be perceived as insults near you (middle finger, twerking, gang signs, and similar)</li>
-                        <li>Playing music or making loud/annoying noises, unless you're in a <a href="#poi">point of interest</a></li>
+                        <li>Playing music or making loud/annoying noises, unless you're in a <a href="#poi"><span class="hover-definition-text" data-term="poi">point of interest</span></a></li>
                         <li>Holding the horn or honking repeatedly, burning tires, or making other noises with vehicles with the intention to annoy, unless you're in a point of interest</li>
                     </ul>
                 </div>
@@ -250,16 +250,16 @@
                 <div class="subtitle">g. Cops working against you</div>
                 <div>
                     <p>
-                        You are always allowed to kill <span class="cop">cops</span> when they're working against you,
+                        You are always allowed to kill <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span> when they're working against you,
                         or when you have a reasonable belief that they are.
                     </p>
                     <p>
                         When you are an <b>innocent civilian</b>, you can kill cops who are stalking or following you 
-                        or your <a href="#friend">friends</a>, unless you are in a <a href="#poi">point of interest</a>.
+                        or your <a href="#friend"><span class="hover-definition-text" data-term="friend">friends</span></a>, unless you are in a <a href="#poi"><span class="hover-definition-text" data-term="poi">point of interest</span></a>.
                     </p>
                     
                     <p>
-                        When you are a <a href="#criminal"><span class="criminal">wanted suspect</span></a>, or you're playing with wanted suspects,
+                        When you are a <a href="#criminal"><span class="hover-definition-text" data-term="criminal"><span class="criminal">wanted suspect</span></span></a>, or you're playing with wanted suspects,
                         you can kill police officers in the following cases:
                         </p><ul>
                             <li>they are chasing or trying to pull you or your friends over</li>
@@ -275,7 +275,7 @@
                         attack and kill them even if they backtrack and choose to flee.<br>
                     <p></p>
                     <p>
-                        Never attack and/or kill random <span class="cop">cops</span>, also known as "cop hunting", or you will get fined or banned.
+                        Never attack and/or kill random <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span>, also known as "cop hunting", or you will get fined or banned.
                     </p>
                 </div>
             </div>
@@ -283,12 +283,12 @@
             <div>
                 <div class="subtitle">h. Paramedics working against you</div>
                 <div>
-                    You're allowed to attack and/or kill <span class="paramedic">paramedics</span> who are reviving or healing your 
-                    <a href="#enemy">enemies</a> or <a href="#opponent">opponents</a>, they recently revived one in your presence, 
+                    You're allowed to attack and/or kill <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span> who are reviving or healing your 
+                    <a href="#enemy"><span class="hover-definition-text" data-term="enemy">enemies</span></a> or <a href="#opponent"><span class="hover-definition-text" data-term="opponent">opponents</span></a>, they recently revived one in your presence, 
                     or you have a reasonable belief that they are going to revive one (e.g. stopping their vehicle near bodies, or staying near them).
                     You are not allowed to take paramedics hostage and force them to work for you, you can only intimidate them not to revive your enemies or opponents.
                     You are not allowed to attack or kill paramedics solely because they are reviving a friend of yours.
-                    Never attack and/or kill random <span class="paramedic">paramedics</span>, or you will get fined or banned.
+                    Never attack and/or kill random <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span>, or you will get fined or banned.
                 </div>
             </div>
             
@@ -305,7 +305,7 @@
                     
                     <ul>
                         <li>Self-<a href="#defense">defense</a>, defense of other cops, and defense of non-<a href="#dangerous">dangerous</a> players</li>
-                        <li><a href="#mw"><span class="most-wanted">Most wanted suspects</span></a>, unless they are surrendering<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> or cuffed</li>
+                        <li><a href="#mw"><span class="hover-definition-text" data-term="mw"><span class="most-wanted">Most wanted suspects</span></span></a>, unless they are surrendering<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> or cuffed</li>
                         
                         <!-- note mw surrender animation knees -->
                         <div id="note[NOTE_ID]" class="note-content">
@@ -316,9 +316,9 @@
                             <p>See the following reports and decisions: <a href="https://discord.com/channels/738534756538384499/1265710791299043372" target="_blank">HBerrA (358) - RDM</a> (24.07.2024 - didn't surrender) and <a href="https://discord.com/channels/738534756538384499/1250300125046112256" target="_blank">charlie reed (81) RDM as cop</a> (12.06.2024 - surrendered on knees and got shot).</p>
                         </div>
 
-                        <li><span class="criminal">Suspects</span> who are seen holding a firearm, any type of blade, or brass knuckles</li>
-                        <li><span class="criminal">Suspects</span> who committed a violent crime in your presence (against a player or an NPC)</li>
-                        <li><span class="criminal">Suspects</span> who committed a violent crime very recently<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> and you saw the call, the log of crimes, or you were informed by another player</li>
+                        <li><span class="hover-definition-text" data-term="criminal"><span class="criminal">Suspects</span></span> who are seen holding a firearm, any type of blade, or brass knuckles</li>
+                        <li><span class="hover-definition-text" data-term="criminal"><span class="criminal">Suspects</span></span> who committed a violent crime in your presence (against a player or an NPC)</li>
+                        <li><span class="hover-definition-text" data-term="criminal"><span class="criminal">Suspects</span></span> who committed a violent crime very recently<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> and you saw the call, the log of crimes, or you were informed by another player</li>
 
                         <!-- Very recently note-->
                         <div id="note[NOTE_ID]" class="note-content">
@@ -333,8 +333,8 @@
                             <p>One should be careful when invoking this rule as justification for use of lethal force as a police officer, as there are unclear pitfalls and gray areas that could result in a job ban.</p>
                         </div>
 
-                        <li><span class="criminal">Suspects</span> who are obviously together with other armed or dangerous <span class="criminal">suspects</span></li>
-                        <li><span class="criminal">Suspects</span> who are
+                        <li><span class="hover-definition-text" data-term="criminal"><span class="criminal">Suspects</span></span> who are obviously together with other armed or dangerous <span class="criminal">suspects</span></li>
+                        <li><span class="hover-definition-text" data-term="criminal"><span class="criminal">Suspects</span></span> who are
                             <ul>
                                 <li>fleeing with a boat or an aircraft</li>
                                 <li>swimming or underwater<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button></li>
@@ -359,17 +359,18 @@
                         <li>
                             if you just joined an active situation, and cops were already shooting at a certain suspect,
                             you may assume the suspect is dangerous and use deadly force as well. If it turns out that 
-                            the suspect was not a <a href="#threat">threat</a>, you will not be responsible in this scenario.
+                            the suspect was not a <a href="#threat"><span class="hover-definition-text" data-term="threat">threat</span></a>, you will not be responsible in this scenario.
                         </li>
                         <li>
-                            you may use your vehicle at <b>low speed</b> to stop a <span class="criminal">suspect</span> that's fleeing on foot,
+                            you may use your vehicle at <b>low speed</b> to stop a <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> that's fleeing on foot,
                             and it's reasonably safe to do so without killing them.
                         </li>
                         <li>
                             you may use your vehicle to chase and ram a suspect that's fleeing with a vehicle, with the intention of disabling it.
                         </li>
                         <li>
-                            you may use <a href="#lesslethal">less-lethal weapons</a> to stop unarmed fleeing <span class="criminal">suspects</span>. 
+                            you may use <a href="#lesslethal"><span class="hover-definition-text" data-term="lesslethal">less-lethal weapons</span></a> to stop unarmed fleeing 
+                            <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspects</span></span>. 
                             You should avoid stunning, blinding with a flashbang or punching suspects who are standing still and complying with police commands, or are handcuffed;
                             this is not a bannable offense, but you might get a warning, detonation or similar action.
                         </li>
@@ -391,23 +392,25 @@
 
                     <ul>
                         <li>An innocent civilian</li>
-                        <li>Another <span class="cop">cop</span></li>
-                        <li>A <span class="paramedic">paramedic</span></li>
-                        <li>A <span class="criminal">suspect</span> that is surrendering on their knees</li>
-                        <li>A <span class="criminal">suspect</span> that is handcuffed (you can only stun them if they are running)</li>
-                        <li>A <span class="criminal">suspect</span> that is in police custody</li>
+                        <li>Another <span class="hover-definition-text" data-term="player_cop"><span class="cop">cop</span></span></li>
+                        <li>A <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedic</span></span></li>
+                        <li>A <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> that is surrendering on their knees</li>
+                        <li>A <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> that is handcuffed (you can only stun them if they are running)</li>
+                        <li>A <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> that is in police custody</li>
                     </ul>
 
                     <div class="subtitle">j. Carjacking as a police officer</div>
                     <div>
-                        You are not allowed to <b>carjack</b> an <b>innocent civilian</b>, 
-                        a <span class="cop">cop</span> or a <span class="paramedic">paramedic</span>.
+                        You are not allowed to <span class="hover-definition-text" data-term="carjack"><b>carjack</b></span> an <span class="hover-definition-text" data-term="player_innocent">
+                            <b>innocent</span> <span class="hover-definition-text" data-term="player_civilian">civilian</b>, 
+                        a <span class="hover-definition-text" data-term="player_cop"><span class="cop">cop</span></span> or a <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedic</span></span>.
                     </div>
 
                     <div class="subtitle">k. Property damage as a police officer</div>
                     <div>
                         You are not allowed to damage the <b>unoccupied</b> vehicle of a civilian unless it's reasonable to think it's being used as part of a crime<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button>. 
-                        You are never allowed to damage the vehicle of another <span class="cop">cop</span> or a <span class="paramedic">paramedic</span>.
+                        You are never allowed to damage the vehicle of another <span class="hover-definition-text" data-term="player_cop"><span class="cop">cop</span></span> or a 
+                        <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedic</span></span>.
                     </div>
                     <!-- note damage unoccupied vehicle cop-->
                     <div id="note[NOTE_ID]" class="note-content">
@@ -429,16 +432,17 @@
             <div>
                 <div class="subtitle">l. Use of force as a paramedic</div>
                 <div>
-                    You may <b>only</b> use lethal force on players in self-defense, defense of other <span class="paramedic">paramedics</span>.
-                    Paramedics have a duty to retreat: when the <a href="#threat">threat</a> ends, you must stop shooting. 
-                    You cannot help <span class="cop">cops</span> in their crime-stopping duties (e.g. shooting at a criminal, or pursuing a criminal while a cop is with you), 
+                    You may <b>only</b> use lethal force on players in self-defense, defense of other <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span>.
+                    Paramedics have a duty to retreat: when the <a href="#threat"><span class="hover-definition-text" data-term="threat">threat</span></a> ends, you must stop shooting. 
+                    You cannot help <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span> in their crime-stopping duties (e.g. shooting at a criminal, or pursuing a criminal while a cop is with you), 
                     but you must work together as <b>a single team</b> with different responsibilities.
                 </div>
 
                 <div class="subtitle">m. Carjacking as a paramedic</div>
                 <div>
-                    You are not allowed to <b>carjack</b> an <b>innocent civilian</b>, 
-                    a <span class="cop">cop</span> or a <span class="paramedic">paramedic</span>.
+                    You are not allowed to <span class="hover-definition-text" data-term="carjack"><b>carjack</b></span> an 
+                    <b><span class="hover-definition-text" data-term="player_innocent">innocent</span> <span class="hover-definition-text" data-term="player_civilian">civilian</span></b>, 
+                    a <span class="hover-definition-text" data-term="player_cop"><span class="cop">cop</span></span> or a <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedic</span></span>.
                 </div>
 
                 <div class="subtitle">n. Property damage as a paramedic</div>
@@ -456,7 +460,7 @@
             <div>
                 <div class="subtitle">o. Most wanted</div>
                 <div>
-                    Players that are <a href="#mw"><span class="most-wanted">most wanted</span></a> can be shot and killed on sight by all players <i>except paramedics</i>.
+                    Players that are <a href="#mw"><span class="hover-definition-text" data-term="mw"><span class="most-wanted">most wanted</span></span></a> can be shot and killed on sight by all players <i>except paramedics</i>.
                 </div>
             </div>
             
@@ -499,13 +503,13 @@
         
         <div id="rule02">
             <h3>2. Do not Cross-Team</h3>
-            <span class="cop">Cops</span> and <span class="paramedic">paramedics</span> are a team, 
-            with different duties, and they are opponents to <span class="criminal">suspects</span>. However, paramedics have a specific
+            <span class="hover-definition-text" data-term="player_cop"><span class="cop">Cops</span></span> and <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span> are a team, 
+            with different duties, and they are opponents to <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspects</span></span>. However, paramedics have a specific
             duty within their team, which is not helping the cops arrest suspects.
             
             <div class="subtitle">a. When you play as a civilian</div>
             <ul>
-                <li>You can't team up or work with <span class="cop">cops</span> and <span class="paramedic">paramedics</span>, with the exception of the scripted features</li>
+                <li>You can't team up or work with <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span> and <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span>, with the exception of the scripted features</li>
                 <li>You can't help them in a fight (unless you have another valid reason to kill their target)</li>
                 <li>You can't help them get away from their opponents by driving them away</li>
                 <li>You can't be in a vehicle with a cop while they're performing their police duties or while you're committing crimes</li>
@@ -513,9 +517,9 @@
             
             <div class="subtitle">b. When you play as a cop</div>
             <ul>
-                <li>You can't team up or work with <span class="criminal">suspects</span>, with the exception of the bribe scripted feature</li>
-                <li>You can't drive a wanted <span class="criminal">suspect</span> anywhere, unless they are being held in custody</li>
-                <li>You can't help a <span class="criminal">suspect</span> in a fight (unless you have another valid reason to kill their target)<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button></li>
+                <li>You can't team up or work with <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspects</span></span>, with the exception of the bribe scripted feature</li>
+                <li>You can't drive a wanted <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> anywhere, unless they are being held in custody</li>
+                <li>You can't help a <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> in a fight (unless you have another valid reason to kill their target)<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button></li>
                 
                 <!-- Note Target priority -->
                 <div id="note[NOTE_ID]" class="note-content">
@@ -526,18 +530,19 @@
                     <p>See the following report and decision: <a href="https://discord.com/channels/738534756538384499/1260176793189748776" target="_blank">CMS x CrtlAltDel AND [ SWAT ] HAJENZ CROSS TEAMING</a> (09.07.2024)</p>
                 </div>
 
-                <li><span class="cop">Cops</span> have the duty to protect life. You can't watch a <span class="criminal">suspect</span> attack a civilian/cuffed suspect and do nothing</li>
-                <li>You can't watch <span class="criminal">suspects</span> attack other <span class="cop">cops</span> or <span class="paramedic">paramedics</span> and do nothing</li>
+                <li><span class="hover-definition-text" data-term="player_cop"><span class="cop">Cops</span></span> have the duty to protect life. You can't watch a <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> attack a civilian/cuffed suspect and do nothing</li>
+                <li>You can't watch <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspects</span></span> attack other <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span> or <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span> and do nothing</li>
                 <li>
                     If you are transporting a passenger that is <b>not</b> one of the following:
                     <ul>
-                        <li>a. a <span class="cop">cop</span></li>
-                        <li>b. a <span class="criminal">suspect</span> in custody</li>
+                        <li>a. a <span class="hover-definition-text" data-term="player_cop"><span class="cop">cop</span></span></li>
+                        <li>b. a <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> in custody</li>
                     </ul>
-                    then you are not allowed to engage in <a href="#police_activity">police activity</a> until they leave the vehicle
+                    then you are not allowed to engage in <a href="#police_activity"><span class="hover-definition-text" data-term="police_activity">police activity</span></a> until they leave the vehicle
                 </li>
                 <li>If your passenger commits <span class="criminal">crimes</span>, you're expected to stop the vehicle and detain them</li>
-                <li>You must not prevent<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> another <span class="cop">cop</span> from completing an arrest<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button>, or attempt to arrest<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> or search<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> their <span class="criminal">cuffed suspect</span> without their permission</li>
+                <li>You must not prevent<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> another <span class="hover-definition-text" data-term="player_cop"><span class="cop">cop</span></span> from completing an arrest<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button>, 
+                    or attempt to arrest<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> or search<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> their <span class="hover-definition-text" data-term="criminal"><span class="criminal">cuffed suspect</span></span> without their permission</li>
                 
                 <!-- accept bribe block arrest-->
                 <div id="note[NOTE_ID]" class="note-content">
@@ -586,14 +591,15 @@
 
             <div class="subtitle">c. When you play as a paramedic</div>
             <ul>
-                <li>You can't team up or work with <span class="criminal">suspects</span>, with the exception of the revive and heal scripted features.</li>
+                <li>You can't team up or work with <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspects</span></span>, with the exception of the revive and heal scripted features.</li>
                 <li>You can't work as a private medic for a specific civilian or group of civilians.</li>
-                <li>You can't help a <span class="criminal">suspect</span> in a fight (unless you have another valid reason to kill their target)</li>
-                <li>You can't drive a <span class="criminal">suspect</span> away from their enemies. If their enemies or the police are after your passenger, 
+                <li>You can't help a <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> in a fight (unless you have another valid reason to kill their target)</li>
+                <li>You can't drive a <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> away from their enemies. If their enemies or the police are after your passenger, 
                     you're expected to stop the vehicle immediately and allow them to arrest them or fight</li>
-                <li>You're not allowed to help <span class="cop">cops</span> in their crime-stopping duties</li>
+                <li>You're not allowed to help <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span> in their crime-stopping duties</li>
                 <li>
-                    You're not allowed to revive <span class="criminal">suspects</span> when they are involved in a shooting with the <span class="cop">cops</span>, 
+                    You're not allowed to revive <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspects</span></span> when they are 
+                    involved in a shooting with the <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span>, 
                     until the cops outnumber the suspects and the situation is under control
                 </li>
             </ul>
@@ -604,7 +610,7 @@
         <div id="rule03">
             <h3>3. Do not Cheat</h3>
             <p>
-                Using any kind of modification or external program<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> that gives you an unfair advantage is not allowed, 
+                Using any kind of <span class="hover-definition-text" data-term="modification">modification</span> or external program<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> that gives you an unfair advantage is not allowed, 
                 including, but not limited to: mod menus, wallhacks, noclip, health lock, damage modifiers.
                 Knowingly teaming up with users of such modifications is not allowed. 
                 If you see a cheater, please, report them. Don't cheat or you will get banned and your progress could get reset.
@@ -880,7 +886,8 @@
     </div>
 
 
-    <!-- INTERACTIVITY -->
+    <!-- - - - INTERACTIVITY - - - -->
+
     <!-- INDEX BUTTON -->
     <button onclick="toggleIndexBox()" id="indexBtn" title="Show index">←</button>
     <!-- BUTTON TO GO TO TOP -->
@@ -891,7 +898,19 @@
             <!-- Content copied from contentIndex will appear here -->
         </div>
     </div>
+    <!-- OVERLAY BUTTON - ALL NOTES -->
+    <button id="showNotesBtn" class="overlay-button" title="Show all notes">📄</button>
+    <!-- Overlay Box -->
+    <div id="notesOverlay" class="overlay">
+        <div class="overlay-content">
+            <span class="close-btn">&times;</span>
+            <h2>All Notes</h2>
+            <div id="allNotesContent"></div>
+        </div>
+    </div>
 
+    <!-- TOOLTIP TOGGLE -->
+    <button id="toggleTooltipsBtn" title="Toggle definition tooltips">🗨️</button>
 
     <script src="scripts/script.js"></script>
 </body>
