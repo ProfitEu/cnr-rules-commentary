@@ -209,6 +209,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // Toggle hover tooltips feature
 function toggleTooltips() {
     tooltipsEnabled = !tooltipsEnabled; // Toggle the flag
+
+    // Get the toggle button
+    const toggleButton = document.getElementById('toggleTooltipsBtn');
+    
+    // Toggle the 'active' class on the button
+    toggleButton.classList.toggle('active');
 }
 
 // Add event listener for the toggle button
