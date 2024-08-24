@@ -216,6 +216,3 @@ document.getElementById('toggleTooltipsBtn').addEventListener('click', toggleToo
 
 // Initialize tooltips on page load
 document.addEventListener('DOMContentLoaded', initializeTooltips);
-    // Add click event listener to the document
-    document.addEventListener('click', handleClickOutside);
-});
