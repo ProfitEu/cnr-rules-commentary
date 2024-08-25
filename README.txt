@@ -5,7 +5,8 @@ when they are enforced etc.
 
 This site has five main features:
 (1) Notes in text
-  - In the rules, you will find a small number next to the text at times. If you     click on it, a comment will reveal itself. This comment is relevant to the       rule to which it belongs.
+  - In the rules, you will find a small number next to the text at times. 
+If you click on it, a comment will reveal itself. This comment is relevant to the rule to which it belongs.
 
 (2) "Go to the top" button
   - A simple button that brings you to the top of the page. 
