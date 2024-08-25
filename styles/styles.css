@@ -189,6 +189,7 @@ body {
     width: 50px;
     height: 40px;
     display: none;
+    border: none;
 }
 
 .overlay-button:hover {
@@ -301,6 +302,7 @@ table {
     width: 50px;
     height: 40px;
     display: none;
+    border: none;
 }
 
 #toggleTooltipsBtn:hover {
