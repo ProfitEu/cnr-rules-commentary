@@ -188,6 +188,7 @@ body {
     cursor: pointer;
     width: 50px;
     height: 40px;
+    display: none;
 }
 
 .overlay-button:hover {
@@ -299,6 +300,7 @@ table {
     transition: background-color 0.3s ease;
     width: 50px;
     height: 40px;
+    display: none;
 }
 
 #toggleTooltipsBtn:hover {
