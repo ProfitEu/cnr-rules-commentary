@@ -1,0 +1,283 @@
+/* dark-mode.css */
+
+/* Define the color palette as CSS variables */
+:root {
+    --background-color: #202327;
+    --primary-text-color: #E0E0E0;
+    /* - - - - */
+    --neon-pink: #ff007f; 
+    --neon-cyan: #00e5ff;
+    /* 
+    I regret the neon theme... 
+    keeping this in case I want to quickly prove to myself
+    just how obnoxious it actually was (and to use for links)
+    */
+    --light-gray: #c0c0c0;
+
+    --accent-color-1: #B0B3B8;
+    --accent-color-2: #EAE5E0;
+    --accent-color-3: #4B79A1;
+
+    --dark-background: #1a1a1a;
+    --tooltip-background: rgba(0, 0, 0, 0.9);
+    --hover-background: #333;
+    --button-background-color: #3f3f3f;
+    --button-background-color-hover: #555;
+
+    --tertiary-text-color: #FF9F45;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+}
+
+a {
+    color: var(--tertiary-text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--accent-color-2)
+}
+
+a:hover {
+    color: var(--neon-cyan);
+}
+
+p, span {
+    color: var(--primary-text-color);
+}
+
+button, .btn, input[type="submit"] {
+    background-color: var(--neon-cyan);
+    border: 2px solid var(--accent-color-2);
+    color: var(--background-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover, .btn:hover, input[type="submit"]:hover {
+    background-color: var(--accent-color-2);
+    color: var(--background-color);
+}
+
+header, footer, nav {
+    background-color: var(--dark-background);
+    border-bottom: 2px solid var(--accent-color-1);
+}
+
+hr {
+    border-color: var(--accent-color-1);
+}
+
+table {
+    background-color: var(--dark-background);
+}
+
+th, td {
+    border: 1px solid var(--accent-color-2);
+
+}
+
+th {
+    background-color: var(--accent-color-1);
+    color: var(--dark-background);
+}
+
+td {
+    background-color: var(--dark-background);
+    color: var(--primary-text-color);
+}
+
+.show-tooltip::after {
+    background-color: var(--tooltip-background);
+    color: var(--primary-text-color);
+    border: 1px solid var(--accent-color-1);
+}
+
+.overlay {
+    background-color: var(--tooltip-background);
+    color: var(--primary-text-color);
+    border: 2px solid var(--accent-color-1);
+}
+
+.disclaimer p, span {
+    color: var(--primary-text-color);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--dark-background);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color-2);
+}
+
+/* Toggle button specific styles */
+#toggleDarkMode {
+    background-color: var(--accent-color-1);
+    color: var(--background-color);
+}
+
+
+#toggleDarkMode:hover {
+    background-color: var(--neon-cyan);
+}
+
+.toggle-text {
+    color: var(--accent-color-2);
+}
+
+/* - - - INTERACTIVITY - - - */
+/* Button to go to top of page */
+#toTopBtn {
+    background-color: var(--button-background-color);
+    color: white;
+}
+
+#toTopBtn:hover {
+    background-color: var(--button-background-color-hover);
+}
+
+/* Index button */
+#indexBtn {
+    background-color: var(--button-background-color);
+    color: white;
+}
+
+#indexBtn:hover {
+    background-color: var(--button-background-color-hover);
+}
+
+/* Index box from index button */
+#indexBox {
+    background-color: #3f3f3f;
+    border: 1px solid var(--accent-color-1);
+}
+
+#index-content {
+    color: var(--accent-color-1);
+}
+
+#index-content a {
+    color: var(--accent-color-2);
+}
+
+#index-content a:hover {
+    color: var(--neon-cyan);
+}
+
+/* - - - OVERLAY BOX AND BUTTON - ALL NOTES - - - */
+
+.overlay-button {
+    background-color: var(--button-background-color);
+}
+
+.overlay-button:hover {
+    background-color: var(--button-background-color-hover);
+}
+
+/* Overlay box styles */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+}
+
+/* Overlay content */
+.overlay-content {
+    background-color: #202020;
+    scrollbar-color: var(--accent-color-2) #6b6b6b; /* For Firefox */
+}
+
+/* Custom scrollbar for WebKit browsers */
+
+.overlay-content::-webkit-scrollbar-track {
+    background: #6b6b6b; 
+}
+
+.overlay-content::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+.overlay-content::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* Rolling curtain effect for the right side */
+.overlay-content:before {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
+    pointer-events: none;
+}
+
+/* Tooltip toggle button*/
+#toggleTooltipsBtn {
+    background-color: var(--button-background-color);
+    border-color: var(--button-background-color);
+}
+
+#toggleTooltipsBtn:hover {
+    background-color: var(--button-background-color-hover);
+}
+
+#toggleTooltipsBtn.active {
+    background-color: var(--accent-color-3);
+}
+
+
+/* Tooltip text */
+.hover-definition-text::after {
+    background-color: #555;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+}
+
+/* Show tooltip text when hovering - AFTER class is added */
+.hover-definition-text.show-tooltip::after {
+    display: block; 
+}
+
+
+/* - - - NOTES - - - */
+.note-content {
+    border-left: 4px solid #ddd;
+    background-color: #555;
+}
+
+.note-content.expanded p {
+    color: var(--primary-text-color);
+}
+
+.note-content.expanded a {
+    text-decoration: none;
+    color: var(--neon-cyan);
+}
+
+.note-content.note-content.expanded a:hover {
+    color: var(--neon-pink);
+    text-decoration: underline;
+}
+
+.note-id {
+    color: var(--accent-color-2);
+}
+
+.note-date {
+    color: var(--primary-text-color);
+}
+
+.note-author {
+    font-style: italic;
+    color: var(--primary-text-color);
+}
+
+.highlight-text-yellow {
+    color: black;
+}
+
+.note-button {
+    background-color: var(--accent-color-2);
+    color:#555;
+}
+
+.note-button:hover {
+    background-color: var(--accent-color-3);
+    color: var(--accent-color-2);
+}
