@@ -229,3 +229,25 @@ document.getElementById('toggleTooltipsBtn').addEventListener('click', toggleToo
 
 // Initialize tooltips on page load
 document.addEventListener('DOMContentLoaded', initializeTooltips);
+
+// - - - TOGGLE DARK MODE - - - //
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleSwitch = document.getElementById('darkModeToggle');
+    const darkModeStylesheet = document.getElementById('dark-mode-stylesheet');
+
+    // Check if dark mode is enabled in local storage
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        darkModeStylesheet.disabled = false;
+        toggleSwitch.checked = true;
+    }
+
+    toggleSwitch.addEventListener('change', function() {
+        if (toggleSwitch.checked) {
+            darkModeStylesheet.disabled = false;
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            darkModeStylesheet.disabled = true;
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+});
