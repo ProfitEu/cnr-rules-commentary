@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CnR Rules with comments</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link id="dark-mode-stylesheet" rel="stylesheet" href="styles/dark-mode.css" disabled>
 </head>
 <body>
     <!-- !!! THE RULES THEMSELVES ARE ACCESIBLE AT https://gtacnr.net/full_rules AND WERE SOURCED FROM SAID SITE !!! -->
@@ -12,6 +13,15 @@
 
     <!-- MAIN CONTAINER -->
     <div id="bodycontainer">
+       
+       <!-- SWITCH TO TOGGLE DARKMODE -->
+       <div class="dark-mode-toggle-container">
+        <span class="toggle-text">Toggle dark mode</span> 
+        <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
+       </div>
 
         <!-- CONTENT INDEX | INDEX MENU PULLS FROM THIS -->
         <div id="contentIndex">
@@ -43,7 +53,7 @@
         </div>
 
         <!-- DISCLAIMER AND PREFACE -->
-        <div id="disclaimer">
+        <div id="disclaimer" class="disclaimer">
             <h3>Disclaimer and preface</h3>
             <p>
                 This is an <b>unofficial copy</b> of the complete rule page of <a href="https://gtacnr.net/">Cops and Robbers V</a> for FiveM. 
@@ -226,8 +236,8 @@
                     <span class="note-date">26.08.2024</span>
                     <span class="note-author">Profit</span>
                     <p>Players who "initiate" an encounter, where they provoke or bait someone into RDMing them may not report that RDM incident according to the <a href="https://gtacnr.net/report_rules#rule06">Report Rules - rule 6b</a>, quoted and highlighted below:</p>
-                    <span style="background-color: rgb(225, 240, 160);">
-                        <span style="font-weight: bold;">"6b. Do not report players for RDM after intentionally baiting or provoking them in any way</span><br/>
+                    <span class="highlight-text-yellow">
+                        <span class="highlight-text-yellow" style="font-weight: bold;">"6b. Do not report players for RDM after intentionally baiting or provoking them in any way</span><br/>
                         Any reports for RDM that show that you have initiated the encounter with provocation or baiting 
                         will be rejected even if the rule was broken, the reported player will be given a pass, 
                         and you will be timed out or blacklisted from the reports section."
