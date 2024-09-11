@@ -23,3 +23,7 @@ If you click on it, a comment will reveal itself. This comment is relevant to th
 (5) "View index" button
  - Button that allows you to quickly jump from header to header.
  - This button is the bottom one in the navigation menu.
+
+
+PS!
+For anyone not using Google Chrome: if you click on a discord URL, you might have to press "enter" in the address bar for it to open in the program! 
