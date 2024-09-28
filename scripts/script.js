@@ -251,3 +251,48 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// - - - CHANGE BETWEEN VERSIONS OF RULE PAGE - - - //
+// Array of version information
+const versions = [
+    { value: 'index.html', text: '[Current] Rules as of 21.09.2024' },
+    { value: 'index201223.html', text: '[Legacy] Rules as of 20.12.2023' }
+];
+
+// Function to populate the dropdown menu
+function populateDropdown() {
+    const dropdown = document.getElementById('versionDropdown');
+    
+    // Clear any existing options
+    dropdown.innerHTML = '';
+    
+    // Loop through the versions array and create option elements
+    versions.forEach(version => {
+        const option = document.createElement('option');
+        option.value = version.value;
+        option.textContent = version.text;
+
+        // If the current URL matches or is just the root, select index.html
+        const currentURL = window.location.pathname.endsWith('/') ? 'index.html' : window.location.pathname.split('/').pop();
+        if (currentURL === version.value) {
+            option.selected = true;
+        }
+
+        dropdown.appendChild(option);
+    });
+}
+
+// Function to load selected version
+function loadVersion() {
+    const dropdown = document.getElementById('versionDropdown');
+    const selectedFile = dropdown.value;
+    
+     // Redirect to the selected HTML file
+     window.location.href = selectedFile;
+}
+
+// Initialize the dropdown on page load
+document.addEventListener('DOMContentLoaded', () => {
+    populateDropdown(); // Populate dropdown when the page loads
+});
