@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,14 @@
     <!-- MAIN CONTAINER -->
     <div id="bodycontainer">
        
+        <!-- CHANGE BETWEEN RULE VERSIONS -->
+        <div class="version-selector" id="version-selector-container">
+            <label for="versionDropdown">Select version:</label>
+            <select id="versionDropdown" onchange="loadVersion()">
+                <!-- Versions stored in JS file -->
+            </select>
+        </div>
+        
        <!-- SWITCH TO TOGGLE DARKMODE -->
        <div class="dark-mode-toggle-container">
         <span class="toggle-text">Toggle dark mode</span> 
@@ -61,7 +69,7 @@
                 You can also find a summary of the rules <a href="https://gtacnr.net/rules">here</a>, which is also translated 
                 in multiple languages. This page is a work in progress and may therefore not always be up to date. 
                 The rules may change without any notice, and the best way to stay updated is by checking the official page. 
-                This copy is based on the rules last updated December 20, 2023.
+                This copy is based on the rules last updated September 21, 2024.
                 Everything below is quoted from the <a href="https://gtacnr.net/full_rules">full rules page</a>, except for the notes.
                 The notes can be accessed by clicking on the small highlighted numbers next to a rule, and will provide commentary to the rules they are attached to.
             </p>
@@ -119,8 +127,9 @@
         <!-- Rule 1 - DO NOT RDM -->
         <div id="rule01">
             <h3>1. Do not RDM</h3>
-            <a href="#attack"><span class="hover-definition-text" data-term="attack">Attacking</span></a><button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> or killing other players for no valid reason, defined here as RDM, is not allowed on this server. 
-            You may not kill any other player except when allowed by these rules.
+            <a href="#attack"><span class="hover-definition-text" data-term="attack">Attacking</span></a><button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button>, 
+            killing or placing <b>hit contracts</b> on other players for no valid reason, defined here as RDM, is not allowed on this server. 
+            You may not attack, kill or <b>place a hit contract</b> on any other player except when allowed by these rules.
 
             <!-- Note Attacking RDM -->
             <div id="note[NOTE_ID]" class="note-content">
@@ -252,9 +261,9 @@
             <div>
                 <div class="subtitle">e. Players in a redzone</div>
                 <div>
-                    If you are in a marked redzone you may kill other players that are occupying it.
-                    If the target leaves the redzone, you may not chase them out of it with the intent 
-                    to attack and/or kill, unless you have a reason to do so.
+                    You can kill any player who is inside a redzone, marked on the radar by a red circle. 
+                    If the target leaves the redzone, you may not chase them out of it with the intent to attack and/or kill, 
+                    unless you have a reason to do so.
                 </div>
             </div>
             
@@ -374,7 +383,7 @@
                     You may only attack players with <b>lethal force</b> in the following cases:
                     
                     <ul>
-                        <li>Self-<a href="#defense">defense</a>, defense of other cops, and defense of non-<a href="#dangerous">dangerous</a> players</li>
+                        <li>Self-<a href="#defense"><span class="hover-definition-text" data-term="defense">defense</span></a>, defense of other cops, and defense of non-<a href="#dangerous">dangerous</a> players</li>
                         <li><a href="#mw"><span class="hover-definition-text" data-term="mw"><span class="most-wanted">Most wanted suspects</span></span></a>, unless they are surrendering<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> or cuffed</li>
                         
                         <!-- note mw surrender animation knees -->
@@ -427,7 +436,13 @@
                             </p>
 
                             <p>It could seem that "very recently" is meant to be tied closely to the definition of a <a href="#threat">threat</a> based on Sasino's statements.</p>
+
                             <p>One should exercise caution when invoking this rule as justification for use of lethal force as a police officer, as there are unclear pitfalls and gray areas that could result in a job ban.</p>
+                            <p>
+                                (Update 28.09.2024): 
+                                See the following report and decision: <a href="discord://discord.com/channels/738534756538384499/1281561381908385884" target="_blank">NBK Washed Nooa (118) Shoot my tires without reason</a> (06.09.2024): 
+                                "NBK | Washed Nooa will be punished for RDM (Shooting non-threat suspect) and receive 5 days cop job ban."
+                            </p>
                         </div>
 
                         <li><span class="hover-definition-text" data-term="criminal"><span class="criminal">Suspects</span></span> who are obviously together with other armed or dangerous <span class="criminal">suspects</span></li>
@@ -995,18 +1010,23 @@
 
     <!-- - - - INTERACTIVITY - - - -->
 
+    <!-- - NAVIGATION BUTTONS - -->
     <!-- INDEX BUTTON -->
     <button onclick="toggleIndexBox()" id="indexBtn" title="Show index">←</button>
+
     <!-- BUTTON TO GO TO TOP -->
     <button onclick="scrollToTop()" id="toTopBtn" title="Go to the top">↑</button>
+
     <!-- INDEX BOX -->
     <div id="indexBox">
         <div id="index-content">
             <!-- Content copied from contentIndex will appear here -->
         </div>
     </div>
+
     <!-- OVERLAY BUTTON - ALL NOTES -->
     <button id="showNotesBtn" class="overlay-button" title="Show all notes">📄</button>
+
     <!-- Overlay Box -->
     <div id="notesOverlay" class="overlay">
         <div class="overlay-content">
@@ -1018,7 +1038,10 @@
 
     <!-- TOOLTIP TOGGLE -->
     <button id="toggleTooltipsBtn" title="Toggle definition tooltips">🗨️</button>
+    <!-- - - - - - - - - - - -->
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/script.js?v=28092024"></script>
+
+
 </body>
 </html>
