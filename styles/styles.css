@@ -37,7 +37,7 @@ body {
 .note-content.expanded {
     padding: 10px;
     margin-top: 10px;
-    max-height: 750px;
+    max-height: 850px;
 }
 
 .note-content.expanded p {
@@ -175,6 +175,21 @@ body {
 #index-content a:hover {
     text-decoration: underline;
 }
+
+
+/* - - - VERSION SELECTOR CONTAINER- - - */
+#version-selector-container {
+    width: 275px; /* Adjust the width as needed */
+    text-align: left;
+    padding: 10px;
+}
+
+#versionDropdown {
+    width: 100%; /* Makes the dropdown fit the container */
+    padding: 5px;
+    font-size: 16px;
+}
+
 
 /* - - - OVERLAY BOX AND BUTTON - ALL NOTES - - - */
 
@@ -355,50 +370,7 @@ table {
 }
 
 
-/* - - - ADAPTATIONS FOR DIFFERENT DEVICES - - - */
-/* For mobile devices */
-@media (max-width: 600px) {
-    body {
-        font-size: 14px;
-        padding: 10px;
-        margin-left: 1em;
-        margin-right: 2em;
-    }
-    
-    #index-content {
-        font-size: 13px;
-        line-height: 1.3;
-    }
 
-    .hover-definition-text::after{
-        left: 0%;
-        transform: translateX(0%);
-        padding: 4px;
-    }
-}
-
-/* For tablets */
-@media (min-width: 601px) and (max-width: 900px) {
-    body {
-        font-size: 16px;
-        padding: 15px;
-        margin-left: 4em;
-        margin-right: 6em;
-    }
-
-}
-
-/* For desktops */
-@media (min-width: 901px) {
-    body {
-        font-size: 18px;
-        padding: 20px;
-        margin-left: 6em;
-        margin-right: 8em;
-    }
-
-}
-/* - - - */
 
 /* Yellow highlight text */
 .highlight-text-yellow {
@@ -523,3 +495,59 @@ input:checked + .slider:before {
 ::-webkit-scrollbar-thumb:hover {
     background-color: #a0a0a0;
 }
+
+
+
+/* - - - ADAPTATIONS FOR DIFFERENT DEVICES - - - */
+/* For mobile devices */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+        margin-left: 1em;
+        margin-right: 2em;
+    }
+    
+    #index-content {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    .hover-definition-text::after{
+        left: 0%;
+        transform: translateX(0%);
+        padding: 4px;
+    }
+
+    .dark-mode-toggle-container {
+        right: 2em; /* Move it further to the right on smaller screens */
+    }
+
+}
+
+/* For tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+    body {
+        font-size: 16px;
+        padding: 15px;
+        margin-left: 4em;
+        margin-right: 6em;
+    }
+
+    .dark-mode-toggle-container {
+        right: 2em; /* Move it further to the right on smaller screens */
+    }
+
+}
+
+/* For desktops */
+@media (min-width: 901px) {
+    body {
+        font-size: 18px;
+        padding: 20px;
+        margin-left: 6em;
+        margin-right: 8em;
+    }
+
+}
+/* - - - */
