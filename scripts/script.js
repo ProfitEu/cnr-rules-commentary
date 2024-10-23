@@ -256,8 +256,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // - - - CHANGE BETWEEN VERSIONS OF RULE PAGE - - - //
 // Array of version information
 const versions = [
-    { value: 'index.html', text: '[Current] Rules as of 21.09.2024' },
+    { value: 'index.html', text: '[Current] Rules as of 16.10.2024' },
+    { value: 'index210924.html', text: '[Legacy] Rules as of 21.09.2024' },
     { value: 'index201223.html', text: '[Legacy] Rules as of 20.12.2023' }
+    
 ];
 
 // Function to populate the dropdown menu
