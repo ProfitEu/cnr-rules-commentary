@@ -497,6 +497,60 @@ input:checked + .slider:before {
 }
 
 
+/* - - - VERSION DIFFERENCE STUFF - - - */
+/* Version change summary */
+.versionChangesSummary {
+    background-color:rgb(255, 200, 125);
+    max-width: 70%;
+}
+
+.versionChangesSummary h4 {
+    background-color: rgb(255, 185, 85);
+    font-size: 18px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: #333;
+}
+
+.versionChangesSummary h5 {
+    font-size: 16px;
+    margin-bottom: 0px;
+    margin-top: 2px;
+    color: #333;
+}
+
+.versionChangesSummary p {
+    font-size: 14px;
+    margin: 0px;
+    color: #333;
+}
+
+.versionChangesSummary a{
+    color: blue;
+}
+
+
+/* Top banner */
+.topbannerlegacy {
+    background-color: rgba(218, 27, 27, 0.7);
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 1px;
+    font-size: 14px;
+    max-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+} 
+
+.topbannerlegacy p{
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0px;
+    font-weight: bold;
+    padding-left: 4px;
+    word-spacing: 40px;
+}
 
 /* - - - ADAPTATIONS FOR DIFFERENT DEVICES - - - */
 /* For mobile devices */
