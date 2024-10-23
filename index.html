@@ -31,6 +31,27 @@
             </label>
        </div>
 
+        <!-- - - Quick changes summary - - -->
+        <div class="versionChangesSummary">
+            <h4>Main rule changes from last version:</h4>
+            <h5>Medics now have a more prominent combat role.</h5>
+            <p>Medics are now allowed to shoot first under certain circumstances.</p>
+            <p>Medics can ride together with cops.</p>
+
+            <h5>Cops can sometimes taze tires.</h5>
+            <p>Cops are allowed to use tazers to taze a suspect's tires if the suspect is stationary and refuses to leave a locked vehicle.</p>
+            
+            <h5>Combat logging on bug exploiters is allowed.</h5>
+            <p>This includes combat logging on star baiters.</p>
+
+            <h5>Link to update: </h5>
+            <p>
+                Here's a link to the update text: 
+                <a href="discord://discord.com/channels/738534756538384499/738535515015479347/1296302139072843777" target="_blank">Update October 17th 2024</a>.
+            </p>
+
+        </div>
+
         <!-- CONTENT INDEX | INDEX MENU PULLS FROM THIS -->
         <div id="contentIndex">
             <h3>Index</h3>
@@ -69,7 +90,7 @@
                 You can also find a summary of the rules <a href="https://gtacnr.net/rules">here</a>, which is also translated 
                 in multiple languages. This page is a work in progress and may therefore not always be up to date. 
                 The rules may change without any notice, and the best way to stay updated is by checking the official page. 
-                This copy is based on the rules last updated September 21, 2024.
+                This copy is based on the rules last updated October 16th, 2024.
                 Everything below is quoted from the <a href="https://gtacnr.net/full_rules">full rules page</a>, except for the notes.
                 The notes can be accessed by clicking on the small highlighted numbers next to a rule, and will provide commentary to the rules they are attached to.
             </p>
@@ -180,8 +201,20 @@
                 <div>
                     It doesn't matter if the incident that resulted in your loss happened when you were a cop or a paramedic,
                     the important thing is that when you take revenge you are not on one of those jobs. You can switch from those
-                    jobs to a civilian job to take your revenge if necessary.
+                    jobs to a civilian job to take your revenge if necessary, or you can place a hit contract instead<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button>.
                 </div>
+                <!--note-->
+                <div id="note[NOTE_ID]" class="note-content">
+                    <span class="note-id">[NOTE_ID]</span>
+                    <span class="note-date">24.10.2024</span>
+                    <span class="note-author">Profit</span>
+                    <p>
+                        The part about placing a hit contract was added to the rules with the October 16th/17th update and seems to express that 
+                        police officers and medics are also allowed to apply this rule to use hit contracts in order to get revenge on a player.
+                    </p>
+                </div>
+
+
                 <div>
                     When two players simultaneously kill each-other (also known as trading), the revenge is not considered to have been satisfied,
                     thus both players are allowed to find the other player to kill them in revenge.<br>
@@ -350,20 +383,38 @@
             <div>
                 <div class="subtitle">h. Paramedics working against you</div>
                 <div>
-                    You're allowed to attack and/or kill <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span> who are reviving or healing your 
-                    <a href="#enemy"><span class="hover-definition-text" data-term="enemy">enemies</span></a> or <a href="#opponent"><span class="hover-definition-text" data-term="opponent">opponents</span></a><button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button>, they recently revived one in your presence, 
-                    or you have a reasonable belief that they are going to revive one (e.g. stopping their vehicle near bodies, or staying near them).
-                    You are not allowed to take paramedics hostage and force them to work for you, you can only intimidate them not to revive your enemies or opponents.
-                    You are not allowed to attack or kill paramedics solely because they are reviving a friend of yours.
-                    Never attack and/or kill random <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span>, or you will get fined or banned.
+                    You may attack or kill <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span> who are doing one of the following:
+
+                    <ul>
+                        <li>reviving an <a href="#enemy"><span class="hover-definition-text" data-term="enemy">enemy</span></a> or <a href="#opponent"><span class="hover-definition-text" data-term="opponent">opponent</span></a></li>
+                        <li>healing an <a href="#enemy"><span class="hover-definition-text" data-term="enemy">enemy</span></a> or <a href="#opponent"><span class="hover-definition-text" data-term="opponent">opponent</span></a></li>
+                        <li>moving or staying to close to your <a href="#enemy"><span class="hover-definition-text" data-term="enemy">enemies</span></a> or <a href="#opponent"><span class="hover-definition-text" data-term="opponent">opponents</span></a> that they can revive</li>
+                        <li>
+                            they are moving towards your location, and getting too close (within assault rifle range) <b>and</b>
+                            there are enemies or opponents to revive in your area.
+                        </li>
+                    </ul>
+
+                    <p>                        
+                        You are not allowed to take paramedics hostage and force them to work for you, you can only intimidate them not to revive your enemies or opponents.
+                    </p>
+
+                    <p>
+                        You are not allowed to attack or kill paramedics solely because they are reviving a friend of yours<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button>.
+                    </p>
+
+                    <p>
+                        Never attack and/or kill random <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span>, or you will get fined or banned.
+                    </p>
                 </div>
             </div>
+
             <!-- note kill medics when revive enemies and opponents not friends -->
             <div id="note[NOTE_ID]" class="note-content">
                 <span class="note-id">[NOTE_ID]</span>
                 <span class="note-date">25.08.2024</span>
                 <span class="note-author">Profit</span>
-                <p>Note that the rule that allows criminals to kill medics when reviving enemies/opponents, does <i>not</i> allow criminals to kill medics who are reviving their friends.</p>
+                <p>This rule prohibits civilians from killing medics without the medics actively "working against" them.</p>
                 <p>
                     See the following report and decision:<br/>
                     <a href="discord://discord.com/channels/738534756538384499/1259121531309789245" target="_blank">rdm.shizuuu (198) RDM</a> (06.07.2024):<br/>
@@ -371,6 +422,7 @@
                 </p>
             </div>
             
+
             <br>
             <h4 id="rdm_cops">Part Two - Police Officers</h4>
             <div>
@@ -494,11 +546,11 @@
                             you may use <a href="#lesslethal"><span class="hover-definition-text" data-term="lesslethal">less-lethal weapons</span></a> to stop unarmed fleeing 
                             <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspects</span></span>. 
                             You should avoid stunning, blinding with a flashbang or punching suspects who are standing still and complying with police commands, or are handcuffed;
-                            this is not a bannable offense, but you might get a warning, detonation or similar action.
+                            this is not a bannable offense, but you might get a warning, detonation or equivalent action.
                         </li>
                         <li>
                             you may also use less-lethal weapons on suspects who are in a vehicle and refuse to get out after you 
-                            asked them to, but not on their vehicle's tires.
+                            asked them to. You may puncture their tires using spike strips or a less-lethal weapon such as a Stun Gun<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button>.
                         </li>
                         <li>
                             you may also use less-lethal weapons on any civilian or suspect who you believe is trying to 
@@ -507,6 +559,16 @@
                             the way and refusing to move.
                         </li>
                     </ul>
+
+                    <!--note using tazer on tires-->
+                    <div id="note[NOTE_ID]" class="note-content">
+                        <span class="note-id">[NOTE_ID]</span>
+                        <span class="note-date">24.10.2024</span>
+                        <span class="note-author">Profit</span>
+                        <p>This is a new rule that was added with the October 16th/17th update.</p>
+                        <p>See the update changes here: <a href="discord://discord.com/channels/738534756538384499/738535515015479347/1296302139072843777" target="_blank">Update October 17th 2024</a></p>
+                    </div>
+
                     
                     <div>
                         You are not allowed to willingly attack/kill other players in the following cases, except in self-defense:
@@ -534,7 +596,7 @@
                         You are never allowed to damage the vehicle of another <span class="hover-definition-text" data-term="player_cop"><span class="cop">cop</span></span> or a 
                         <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedic</span></span>.
                     </div>
-                    <!-- note damage unoccupied vehicle cop-->
+                    <!-- note damage unoccupied vehicle cop -->
                     <div id="note[NOTE_ID]" class="note-content">
                         <span class="note-id">[NOTE_ID]</span>
                         <span class="note-date">24.08.2024</span>
@@ -554,10 +616,22 @@
             <div>
                 <div class="subtitle">l. Use of force as a paramedic</div>
                 <div>
-                    You may <b>only</b> use lethal force on players in self-defense, defense of other <span class="hover-definition-text" data-term="player_medic"><span class="paramedic">paramedics</span></span>.
-                    Paramedics have a duty to retreat: when the <a href="#threat"><span class="hover-definition-text" data-term="threat">threat</span></a> ends, you must stop shooting. 
-                    You cannot help <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span> in their crime-stopping duties (e.g. shooting at a criminal, or pursuing a criminal while a cop is with you), 
-                    but you must work together as <b>a single team</b> with different responsibilities.
+                    You may only use lethal force in the following cases:
+                    <ul>
+                        <li>Self-defense</li>
+                        <li>
+                            Defense of a 
+                            <a href="#player_medic"><span class="hover-definition-text" data-term="player_medic">paramedic</a></span>, 
+                            <a href="#player_cop"><span class="hover-definition-text" data-term="player_cop">police officer</a></span> 
+                            or <a href="#player_innocent"><span class="hover-definition-text" data-term="player_innocent">innocent</a></span> 
+                            <a href="#player_civilian"><span class="hover-definition-text" data-term="player_civilian">civilian</span></a>
+                        </li>
+                        <li>Attacking criminals whose presence is a <a href="#threat"><span class="hover-definition-text" data-term="threat">threat</span></a> to you in case you went to revive or heal another player near them</li>
+                    </ul>
+                </div>
+
+                <div>
+                    Paramedics have a duty to retreat: when the <a href="#threat"><span class="hover-definition-text" data-term="threat">threat</span></a> ends, you must stop shooting.
                 </div>
 
                 <div class="subtitle">m. Carjacking as a paramedic</div>
@@ -599,14 +673,16 @@
             <div>
                 <div class="subtitle">q. Unintentional kills</div>
                 <div>
-                    If you unintentionally damage or kill a player, but it was a careless or negligent act, you could be subject to moderation action (e.g.
-                    shooting in the direction of a player that you're not supposed to shoot at, and you saw they were there).
-                    The only exception is when the situation was completely out of your control (e.g. lag issues, players suddenly running in the
-                    middle of the street, or in front of your line of fire) or when a player uses a cuffed or AFK player as a human shield.
-                    In case of car accidents, whoever disregards basic traffic rules, such as driving on the wrong lane or jaywalking, is responsible
-                    for the damage or death.
-                    <br>
-                    Unintentional RDM must not be punished in the same measure as intentional RDM.
+                    <p>
+                        If you unintentionally damage or kill a player, but it was a careless or negligent act, you could be subject to moderation action (e.g. 
+                        shooting in the direction of a player that you're not supposed to shoot at, and you saw they were there).
+                        The only exception is when the situation was completely out of your control (e.g. lag issues, players suddenly running in the
+                        middle of the street, or in front of your line of fire) or when a player uses a cuffed or AFK player as a human shield.
+                        In case of car accidents, whoever disregards basic traffic rules, such as driving on the wrong lane or jaywalking, is responsible
+                        for the damage or death.
+                    </p>
+                    
+                    <p>Unintentional RDM will be punished with a fine or lesser punishment.</p>
                 </div>
             </div>
             
@@ -660,8 +736,21 @@
                         <li>a. a <span class="hover-definition-text" data-term="player_cop"><span class="cop">cop</span></span></li>
                         <li>b. a <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> in custody</li>
                     </ul>
-                    then you are not allowed to engage in <a href="#police_activity"><span class="hover-definition-text" data-term="police_activity">police activity</span></a> until they leave the vehicle
+                    then you are not allowed to engage in <a href="#police_activity"><span class="hover-definition-text" data-term="police_activity">police activity</span></a> until they leave the vehicle<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button>
                 </li>
+
+                <!--note cop and medic ride together-->
+                <div id="note[NOTE_ID]" class="note-content">
+                    <span class="note-id">[NOTE_ID]</span>
+                    <span class="note-date">24.10.2024</span>
+                    <span class="note-author">Profit</span>
+                    <p>Contrary to what this rule states, Sasino clarified that cops and medics are allowed to ride together after the October 16th/17th update.</p>
+                    <p>The news post about the paramedic rule change also stated that the restriction for medics and cops "chasing a suspect together" was removed.</p>
+                    <p>See this message from Sasino: <a href="discord://discord.com/channels/738534756538384499/738534756538384504/1296316940041719850" target="_blank">"they can ride, but ems can only shoot when suspect is an active threat [...]</a> (17.10.2024)</p>
+                    <p>See the news post: <a href="discord://discord.com/channels/738534756538384499/738535515015479347/1296302139072843777" target="_blank">Update October 17th 2024</a></p>
+
+                </div>
+
                 <li>If your passenger commits <span class="criminal">crimes</span>, you're expected to stop the vehicle and detain them</li>
                 <li>You must not prevent<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> another <span class="hover-definition-text" data-term="player_cop"><span class="cop">cop</span></span> from completing an arrest<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button>, 
                     or attempt to arrest<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> or search<button class="note-button" data-note-id="note[NOTE_ID]">[NOTE_ID]</button> their <span class="hover-definition-text" data-term="criminal"><span class="criminal">cuffed suspect</span></span> without their permission</li>
@@ -718,13 +807,21 @@
                 <li>You can't help a <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> in a fight (unless you have another valid reason to kill their target)</li>
                 <li>You can't drive a <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspect</span></span> away from their enemies. If their enemies or the police are after your passenger, 
                     you're expected to stop the vehicle immediately and allow them to arrest them or fight</li>
+                
+                <!--
+                
+                LEGACY RULES!!
+
                 <li>You're not allowed to help <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span> in their crime-stopping duties</li>
                 <li>
                     You're not allowed to revive <span class="hover-definition-text" data-term="criminal"><span class="criminal">suspects</span></span> when they are 
                     involved in a shooting with the <span class="hover-definition-text" data-term="player_cop"><span class="cop">cops</span></span>, 
-                    until the cops outnumber the suspects and the situation is under control
+                    until the cops outnumber the suspects and the situation is under control 
+                -->
+
                 </li>
             </ul>
+
 
             Don't team up with or help opponents or you will get fined or banned.<br>
         </div>
@@ -819,10 +916,9 @@
                 </p><h4>Exceptions</h4>
                 You can combat log legally in the following cases:
                 <ul>
-                    <li>A cheater is using disallowed mods to kill you</li>
+                    <li>A cheater used disallowed mods or exploited a bug to kill or arrest you</li>
                     <li>You've been in police custody for a reasonably long period of time and the cops are not taking you to jail, or unreasonably taking you to a far jail</li>
-                    <li>A police officer is trying to kill you against the rules</li>
-                    <li>A paramedic is trying to kill you against the rules</li>
+                    <li>A police officer or paramedic is trying to kill you against their job-specific rules</li>
                 </ul>
 
                 Since civilian on civilian RDM is hard to prove, combat logging is not allowed in those cases.
@@ -869,7 +965,7 @@
         </div>
         
         <div id="rule10">
-            <h3>10. Maintain an Appropriate Behavior</h3>
+            <h3>10. Code of Conduct</h3>
             <div>
                 <div class="subtitle">a. Underage users</div>
                 <div>
@@ -1008,6 +1104,8 @@
     </div>
 
 
+
+
     <!-- - - - INTERACTIVITY - - - -->
 
     <!-- - NAVIGATION BUTTONS - -->
@@ -1040,7 +1138,7 @@
     <button id="toggleTooltipsBtn" title="Toggle definition tooltips">🗨️</button>
     <!-- - - - - - - - - - - -->
 
-    <script src="scripts/script.js?v=28092024"></script>
+    <script src="scripts/script.js?v=16102024"></script>
 
 
 </body>
