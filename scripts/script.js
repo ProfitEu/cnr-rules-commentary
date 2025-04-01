@@ -256,7 +256,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // - - - CHANGE BETWEEN VERSIONS OF RULE PAGE - - - //
 // Array of version information
 const versions = [
-    { value: 'index.html', text: '[Current] Rules as of 30.10.2024' },
+    { value: 'index.html', text: '[Current] Rules as of 25.01.2025' },
+    { value: 'index301024.html', text: '[Legacy] Rules as of 30.10.2024' },
     { value: 'index161024.html', text: '[Legacy] Rules as of 16.10.2024' },
     { value: 'index210924.html', text: '[Legacy] Rules as of 21.09.2024' },
     { value: 'index201223.html', text: '[Legacy] Rules as of 20.12.2023' }
